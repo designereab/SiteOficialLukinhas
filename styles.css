@@ -93,14 +93,14 @@ header .container {
   flex-direction: column;
   cursor: pointer;
   z-index: 1000;
-  margin-left: 0px auto;
+  margin-left: 0;
 }
 
 .menu-toggle .bar {
   width: 30px;
   height: 2px;
   background-color: #fff;
-  margin-left: 0px auto;
+  margin: 4px 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -247,7 +247,7 @@ html {
 .welcome-header {
   position: relative;
   text-align: center;
-  padding: 400px 10px;
+  padding: 20vh 10px;
   background: rgba(0, 0, 0, 0.3);
   color: #fff;
   z-index: 2;
@@ -661,8 +661,8 @@ footer .footer-privacy a:hover {
 /* Estilos específicos para a página de Política de Privacidade */
 .politica-privacidade {
   max-width: 1200px;
-  margin: 0px auto ;
-  padding: 150px 40px 20px;
+  margin: 80px auto 20px;
+  padding: 40px;
   background: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   backdrop-filter: blur(10px);
