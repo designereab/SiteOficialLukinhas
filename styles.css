@@ -574,11 +574,16 @@ footer .footer-privacy a {
   color: #fff;
   text-decoration: none;
   font-size: 0.8rem;
-  transition: color 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
+/* Efeito de hover com gradiente (igual ao das redes sociais) */
 footer .footer-privacy a:hover {
-  color: #25D366; /* Cor do WhatsApp para consistência */
+  background: linear-gradient(to right, #ff0000, #e8ea46, #8dfffb, #0037c2, #000000);
+  color: #000;
+  transform: scale(1.1);
 }
 
 /* Seção de Agenda */
