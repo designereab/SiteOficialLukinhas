@@ -658,7 +658,7 @@ footer .footer-privacy a:hover {
 .politica-privacidade {
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px 20px;
   background: #000;
   border-radius: 10px;
   backdrop-filter: blur(10px);
@@ -672,14 +672,14 @@ footer .footer-privacy a:hover {
 }
 
 .politica-privacidade h3 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-top: 30px;
   margin-bottom: 15px;
   color: #000;
 }
 
 .politica-privacidade p {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   line-height: 1.8;
   margin-bottom: 20px;
   color: #ddd;
