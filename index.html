@@ -120,28 +120,28 @@
     <div class="container">
       <h2>VÍDEOS</h2>
       
-       <!-- Embed do YouTube (Playlist) -->
-    <div class="youtube-embed">
-      <iframe
-        width="100%"
-        height="400"
-        src="https://www.youtube.com/embed?listType=playlist&list=PLQlRsUC9-BVKiqZoHt6HG64z1-B5SaeUX&si=yiN6_n7cJcU8-rNI"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
+      <!-- Embed do YouTube (Playlist) -->
+      <div class="youtube-embed">
+        <iframe
+          width="100%"
+          height="400"
+          src="https://www.youtube.com/embed?listType=playlist&list=PLQlRsUC9-BVKiqZoHt6HG64z1-B5SaeUX&si=yiN6_n7cJcU8-rNI"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
 
-      <!-- Carrossel de Vídeos -->
-      <div class="video-carousel">
+      <!-- Galeria de Vídeos -->
+      <div class="video-gallery">
         <!-- Botão de navegação (anterior) -->
-        <button class="carousel-button prev" aria-label="Anterior">
+        <button class="gallery-button prev" aria-label="Anterior">
           <i class="fas fa-chevron-left"></i>
         </button>
 
         <!-- Wrapper dos vídeos -->
-        <div class="video-wrapper">
-          <div class="video-slide">
+        <div class="video-gallery-wrapper">
+          <div class="video-gallery-slide active">
             <iframe
               class="video-player"
               src="https://www.youtube.com/embed/gieCCsyPp_g"
@@ -152,7 +152,7 @@
               allowfullscreen>
             </iframe>
           </div>
-          <div class="video-slide">
+          <div class="video-gallery-slide">
             <iframe
               class="video-player"
               src="https://youtube.com/embed/JaDyV8Xcfig"
@@ -163,10 +163,10 @@
               allowfullscreen>
             </iframe>
           </div>
-          <div class="video-slide">
+          <div class="video-gallery-slide">
             <iframe
               class="video-player"
-              src="https://www.youtube.com/embed/OssWmFkpEO4"
+              src="https://youtube.com/shorts/OssWmFkpEO4"
               title="Borboletas @victoreleo"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -174,21 +174,10 @@
               allowfullscreen>
             </iframe>
           </div>
-          <div class="video-slide">
-            <iframe
-              class="video-player"
-              src="https://www.youtube.com/embed/uhFGSTLaZqQ"
-              title="Eu gosto assim @gustavopmioto"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </div> */linha do carrossel/*
+        </div>
 
         <!-- Botão de navegação (próximo) -->
-        <button class="carousel-button next" aria-label="Próximo">
+        <button class="gallery-button next" aria-label="Próximo">
           <i class="fas fa-chevron-right"></i>
         </button>
       </div>
