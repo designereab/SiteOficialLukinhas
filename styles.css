@@ -83,12 +83,13 @@ header {
 
 header .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Centraliza os elementos */
   align-items: center;
-  max-width: 1200px; /* Define uma largura máxima para o conteúdo */
-  width: 100%; /* Ocupa 100% da largura disponível */
-  margin: 0 auto; /* Centraliza o container */
-  padding: 0 20px; /* Adiciona um padding lateral */
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative; /* Permite posicionar o nav corretamente */
 }
 
 /* Menu Hambúrguer (lado esquerdo) */
@@ -97,7 +98,7 @@ header .container {
   flex-direction: column;
   cursor: pointer;
   z-index: 1000;
-  margin-left: 4px; /* Ajuste a margem esquerda para alinhar com o conteúdo */
+  margin-right: auto; /* Empurra o ícone de menu para a esquerda */
 }
 
 .menu-toggle .bar {
@@ -111,7 +112,7 @@ header .container {
 /* Logotipo centralizada */
 header .logo {
   text-align: center;
-  flex: 1;
+  margin: 0 auto; /* Centraliza a logo */
 }
 
 header .logo img {
@@ -121,15 +122,15 @@ header .logo img {
 /* Navegação (alinhada com o ícone do menu) */
 nav {
   position: absolute;
-  top: 100px;
-  left: 0px;
+  top: 60px; /* Ajuste conforme necessário */
+  left: 20px; /* Ajuste conforme necessário */
   background-color: rgba(17, 17, 17, 0.9);
   border-radius: 5px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   display: none;
   z-index: 1001;
   padding: 10px;
-  width: 200px; /* Defina uma largura fixa para o menu */
+  width: 200px;
 }
 
 nav.active {
@@ -163,9 +164,9 @@ nav ul.nav-list li a:hover {
 /* Ícones de Redes Sociais (lado direito) */
 .social-icons {
   display: flex;
-  gap: 12px; /* Espaçamento entre os ícones */
+  gap: 12px;
   align-items: center;
-  margin-left: auto; /* Empurra os ícones para a direita */
+  margin-left: auto; /* Empurra os ícones de redes sociais para a direita */
 }
 
 .social-icons a {
