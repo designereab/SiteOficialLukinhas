@@ -100,7 +100,7 @@ header .container {
   width: 30px;
   height: 2px;
   background-color: #fff;
-  margin: 0px auto;
+  margin: 6px auto;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -670,6 +670,7 @@ footer .footer-privacy a:hover {
   border: 1px solid rgba(255, 255, 255, 0.2);
   position: relative;
   z-index: 2; /* Garante que o conteúdo fique acima do vídeo */
+  text-align: center; /* Centraliza o texto */
 }
 
 .politica-privacidade h2 {
@@ -683,6 +684,7 @@ footer .footer-privacy a:hover {
   margin-top: 30px;
   margin-bottom: 15px;
   color: #000;
+  text-align: center;
 }
 
 .politica-privacidade p {
@@ -690,11 +692,13 @@ footer .footer-privacy a:hover {
   line-height: 1.8;
   margin-bottom: 20px;
   color: #ddd;
+  text-align: center; /* Centraliza o texto */
 }
 
 .politica-privacidade ul {
   margin-bottom: 20px;
   padding-left: 20px;
+  text-align: left; /* Alinha o texto à esquerda dentro da lista */
 }
 
 .politica-privacidade ul li {
