@@ -54,3 +54,25 @@ backToTopButton.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
+
+// Controle do Carrossel de Vídeos
+const videoWrapper = document.querySelector('.video-wrapper');
+const prevButton = document.querySelector('.carousel-button.prev');
+const nextButton = document.querySelector('.carousel-button.next');
+const videoSlides = document.querySelectorAll('.video-slide');
+let currentIndex = 0;
+
+// Função para mover o carrossel
+const moveCarousel = (direction) => {
+  if (direction === 'next') {
+    currentIndex = (currentIndex + 1) % videoSlides.length;
+  } else if (direction === 'prev') {
+    currentIndex = (currentIndex - 1 + videoSlides.length) % videoSlides.length;
+  }
+  const offset = -currentIndex * 100;
+  videoWrapper.style.transform = `translateX(${offset}%)`;
+};
+
+// Eventos para os botões de navegação
+prevButton.addEventListener('click', () => moveCarousel('prev'));
+nextButton.addEventListener('click', () => moveCarousel('next'));
