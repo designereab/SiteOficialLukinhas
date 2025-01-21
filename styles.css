@@ -745,7 +745,7 @@ footer a:hover {
 
 /* Estilo específico para o link da Política de Privacidade */
 footer a[href="/politica-de-privacidade"] {
-  font-size: 1rem; /* Tamanho da fonte */
+  font-size: 0.8rem; /* Tamanho da fonte */
   margin-left: 10px; /* Espaçamento à esquerda */
   border: 1px solid rgba(255, 255, 255, 0.3); /* Borda sutil */
   padding: 8px 15px; /* Aumenta o padding para destacar */
