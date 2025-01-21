@@ -93,7 +93,7 @@ header .container {
   flex-direction: column;
   cursor: pointer;
   z-index: 1000;
-  margin-left: 0 auto;
+  margin-left: 0px auto;
 }
 
 .menu-toggle .bar {
