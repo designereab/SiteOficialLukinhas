@@ -11,6 +11,7 @@ body {
   color: #fff;
   position: relative;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 /* Títulos principais com fundo preto e letras brancas */
@@ -18,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   color: #fff;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   text-align: center;
   font-size: 1.7rem;
   padding: 10px 20px;
@@ -28,6 +29,12 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   width: fit-content;
   animation: none;
+}
+
+@media (max-width: 768px) {
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 40px;
+  }
 }
 
 /* Vídeo de fundo */
@@ -157,7 +164,7 @@ nav ul.nav-list li a:hover {
   color: #fff;
   font-size: 1.5rem;
   text-decoration: none;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
   padding: 5px;
   border-radius: 50%;
   width: 40px;
@@ -171,6 +178,7 @@ nav ul.nav-list li a:hover {
 .social-icons a:hover {
   background: linear-gradient(to right, #ff0000, #e8ea46, #8dfffb, #0037c2, #000000);
   color: #000;
+  transform: scale(1.1);
 }
 
 /* Ajuste do scroll para compensar o cabeçalho fixo */
@@ -193,7 +201,7 @@ html {
   height: 40px;
   font-size: 1.2rem;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -203,6 +211,7 @@ html {
   background: linear-gradient(to right, #ff0000, #e8ea46, #8dfffb, #0037c2, #000000);
   color: #000;
   transform: scale(1.1);
+  opacity: 0.9;
 }
 
 /* Cabeçalho de Boas-Vindas */
@@ -222,6 +231,12 @@ html {
   margin-bottom: 30px;
   background: none;
   padding: 0;
+}
+
+@media (max-width: 768px) {
+  .welcome-header h1 {
+    font-size: 2.5rem;
+  }
 }
 
 .welcome-header .listen-button {
@@ -349,6 +364,7 @@ html {
   min-width: 100%;
   box-sizing: border-box;
   display: none;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .video-gallery-slide.active {
