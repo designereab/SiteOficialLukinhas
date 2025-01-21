@@ -8,6 +8,7 @@ if (mobileMenu && navList) {
     const isActive = navList.classList.toggle('active');
     mobileMenu.setAttribute('aria-expanded', isActive);
   });
+}
 
   // Fechar o menu ao clicar em um link
   const closeMenuOnLinkClick = () => {
