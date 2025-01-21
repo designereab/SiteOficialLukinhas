@@ -725,3 +725,36 @@ footer .footer-logo img {
 .cookie-consent-button:hover {
   background-color: #128C7E; /* Cor mais escura ao passar o mouse */
 }
+
+/* Estilo para o link da Política de Privacidade no rodapé */
+footer a {
+  color: #fff; /* Cor branca para o link */
+  text-decoration: none; /* Remove o sublinhado padrão */
+  font-weight: 500; /* Peso da fonte */
+  transition: color 0.3s ease, background 0.3s ease; /* Transição suave */
+  padding: 5px 10px; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Efeito de hover com gradiente */
+footer a:hover {
+  background: linear-gradient(to right, #ff0000, #e8ea46, #8dfffb, #0037c2, #000000);
+  color: #000; /* Cor do texto ao passar o mouse */
+  text-decoration: none; /* Garante que não apareça sublinhado */
+}
+
+/* Estilo específico para o link da Política de Privacidade */
+footer a[href="/politica-de-privacidade"] {
+  font-size: 1rem; /* Tamanho da fonte */
+  margin-left: 10px; /* Espaçamento à esquerda */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Borda sutil */
+  padding: 8px 15px; /* Aumenta o padding para destacar */
+}
+
+/* Efeito de hover específico para o link da Política de Privacidade */
+footer a[href="/politica-de-privacidade"]:hover {
+  background: linear-gradient(to right, #ff0000, #e8ea46, #8dfffb, #0037c2, #000000);
+  color: #000; /* Cor do texto ao passar o mouse */
+  border-color: transparent; /* Remove a borda ao passar o mouse */
+  transform: scale(1.05); /* Efeito de escala suave */
+}
