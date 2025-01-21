@@ -214,6 +214,29 @@ html {
   opacity: 0.9;
 }
 
+/* Botão do WhatsApp */
+.whatsapp-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background: linear-gradient(to right, #25d366, #128c7e); /* Cores do WhatsApp */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  margin-top: 20px;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+  opacity: 0.9; /* Leve redução de opacidade */
+}
+
+.whatsapp-button i {
+  margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+}
+
 /* Cabeçalho de Boas-Vindas */
 .welcome-header {
   position: relative;
