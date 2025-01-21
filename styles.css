@@ -672,13 +672,13 @@ footer .footer-privacy a:hover {
 }
 
 .politica-privacidade h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-bottom: 20px;
   text-align: center;
 }
 
 .politica-privacidade h3 {
-  font-size: 0.5rem;
+  font-size: 1.2rem;
   margin-top: 20px;
   margin-bottom: 15px;
   color: #000;
@@ -686,7 +686,7 @@ footer .footer-privacy a:hover {
 }
 
 .politica-privacidade p {
-  font-size: 0.8rem;
+  font-size: 1.5rem;
   line-height: 1.8;
   margin-bottom: 20px;
   color: #ddd;
