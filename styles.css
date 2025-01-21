@@ -548,17 +548,46 @@ footer {
 
 footer .container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  gap: 20px; /* Espaçamento entre a logo e o conteúdo */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* Estilo para o logotipo no rodapé */
+/* Estilo para a logo no rodapé */
 footer .footer-logo img {
   height: 40px;
   width: auto;
   border-radius: 5px;
-  filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1); /* Inverte a cor da logo (se necessário) */
+}
+
+/* Estilo para o conteúdo do rodapé (texto e link) */
+footer .footer-content {
+  display: flex;
+  flex-direction: column; /* Coloca o texto e o link em coluna */
+  align-items: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+/* Estilo para o texto no rodapé */
+footer .footer-content p {
+  margin: 0; /* Remove a margem padrão do parágrafo */
+  font-size: 1rem;
+}
+
+/* Estilo para o link da Política de Privacidade no rodapé */
+footer .footer-content a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-top: 5px; /* Espaçamento entre o texto e o link */
+  transition: color 0.3s ease;
+}
+
+footer .footer-content a:hover {
+  color: #25D366; /* Cor do WhatsApp para consistência */
 }
 
 /* Seção de Agenda */
@@ -724,37 +753,4 @@ footer .footer-logo img {
 
 .cookie-consent-button:hover {
   background-color: #128C7E; /* Cor mais escura ao passar o mouse */
-}
-
-/* Estilo para o link da Política de Privacidade no rodapé */
-footer a {
-  color: #fff; /* Cor branca para o link */
-  text-decoration: none; /* Remove o sublinhado padrão */
-  font-weight: 500; /* Peso da fonte */
-  transition: color 0.3s ease, background 0.3s ease; /* Transição suave */
-  padding: 5px 10px; /* Espaçamento interno */
-  border-radius: 5px; /* Bordas arredondadas */
-}
-
-/* Efeito de hover com gradiente */
-footer a:hover {
-  background: linear-gradient(to right, #ff0000, #e8ea46, #8dfffb, #0037c2, #000000);
-  color: #000; /* Cor do texto ao passar o mouse */
-  text-decoration: none; /* Garante que não apareça sublinhado */
-}
-
-/* Estilo específico para o link da Política de Privacidade */
-footer a[href="/politica-de-privacidade"] {
-  font-size: 0.5rem; /* Tamanho da fonte */
-  margin-left: 10px; /* Espaçamento à esquerda */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Borda sutil */
-  padding: 8px 15px; /* Aumenta o padding para destacar */
-}
-
-/* Efeito de hover específico para o link da Política de Privacidade */
-footer a[href="/politica-de-privacidade"]:hover {
-  background: linear-gradient(to right, #ff0000, #e8ea46, #8dfffb, #0037c2, #000000);
-  color: #000; /* Cor do texto ao passar o mouse */
-  border-color: transparent; /* Remove a borda ao passar o mouse */
-  transform: scale(1.0); /* Efeito de escala suave */
 }
