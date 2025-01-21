@@ -93,14 +93,14 @@ header .container {
   flex-direction: column;
   cursor: pointer;
   z-index: 1000;
-  margin-left: 20px; /* Adiciona margem à esquerda para alinhar o ícone */
+  margin-left: 0 auto; /* Adiciona margem à esquerda para alinhar o ícone */
 }
 
 .menu-toggle .bar {
   width: 30px;
   height: 2px;
   background-color: #fff;
-  margin: 4px 0;
+  margin: 0px auto;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -566,7 +566,7 @@ footer .footer-logo img {
 /* Estilo para o texto no rodapé */
 footer .footer-text p {
   margin: 0; /* Remove a margem padrão do parágrafo */
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 /* Estilo para o link da Política de Privacidade no rodapé */
