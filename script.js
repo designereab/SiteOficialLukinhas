@@ -88,18 +88,19 @@ if (videoGalleryWrapper && prevGalleryButton && nextGalleryButton && videoGaller
 
 // Controle do banner de cookies
 document.addEventListener('DOMContentLoaded', () => {
-const cookieConsentBanner = document.getElementById('cookie-consent-banner');
-const acceptCookiesButton = document.getElementById('accept-cookies');
+  const cookieConsentBanner = document.getElementById('cookie-consent-banner');
+  const acceptCookiesButton = document.getElementById('accept-cookies');
 
-if (cookieConsentBanner && acceptCookiesButton) {
-  const hasAcceptedCookies = localStorage.getItem('cookies-accepted');
+  if (cookieConsentBanner && acceptCookiesButton) {
+    const hasAcceptedCookies = localStorage.getItem('cookies-accepted');
 
-  if (!hasAcceptedCookies) {
-    cookieConsentBanner.style.display = 'block';
+    if (!hasAcceptedCookies) {
+      cookieConsentBanner.style.display = 'block';
+    }
+
+    acceptCookiesButton.addEventListener('click', () => {
+      localStorage.setItem('cookies-accepted', 'true');
+      cookieConsentBanner.style.display = 'none';
+    });
   }
-
-  acceptCookiesButton.addEventListener('click', () => {
-    localStorage.setItem('cookies-accepted', 'true');
-    cookieConsentBanner.style.display = 'none';
-  });
-}
+});
