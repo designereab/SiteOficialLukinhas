@@ -90,8 +90,9 @@ if (videoGalleryWrapper && prevGalleryButton && nextGalleryButton && videoGaller
 document.addEventListener('DOMContentLoaded', () => {
   const cookieConsentBanner = document.getElementById('cookie-consent-banner');
   const acceptCookiesButton = document.getElementById('accept-cookies');
+  const declineCookiesButton = document.getElementById('decline-cookies');
 
-  if (cookieConsentBanner && acceptCookiesButton) {
+  if (cookieConsentBanner && acceptCookiesButton && declineCookiesButton) {
     const hasAcceptedCookies = localStorage.getItem('cookies-accepted');
 
     if (!hasAcceptedCookies) {
@@ -100,6 +101,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     acceptCookiesButton.addEventListener('click', () => {
       localStorage.setItem('cookies-accepted', 'true');
+      cookieConsentBanner.style.display = 'none';
+    });
+
+    declineCookiesButton.addEventListener('click', () => {
+      localStorage.setItem('cookies-declined', 'true');
       cookieConsentBanner.style.display = 'none';
     });
   }
