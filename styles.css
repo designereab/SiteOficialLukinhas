@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Cabeçalho */
 header {
-  position: fixed;
+ position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -76,15 +76,19 @@ header {
   transition: background-color 0.3s ease;
   padding: 15px 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
 }
 
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  max-width: 1200px; /* Define uma largura máxima para o conteúdo */
+  width: 100%; /* Ocupa 100% da largura disponível */
+  margin: 0 auto; /* Centraliza o container */
+  padding: 0 20px; /* Adiciona um padding lateral */
 }
 
 /* Menu Hambúrguer (lado esquerdo) */
