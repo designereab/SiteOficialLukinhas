@@ -85,3 +85,20 @@ nextGalleryButton.addEventListener('click', () => moveGallery('next'));
 
 // Mostrar o primeiro slide ao carregar a página
 showSlide(currentGalleryIndex);
+
+// Controle do banner de cookies
+const cookieConsentBanner = document.getElementById('cookie-consent-banner');
+const acceptCookiesButton = document.getElementById('accept-cookies');
+
+// Verifica se o usuário já aceitou os cookies
+const hasAcceptedCookies = localStorage.getItem('cookies-accepted');
+
+if (!hasAcceptedCookies) {
+  cookieConsentBanner.style.display = 'flex'; // Mostra o banner se o usuário não aceitou
+}
+
+// Função para aceitar os cookies
+acceptCookiesButton.addEventListener('click', () => {
+  localStorage.setItem('cookies-accepted', 'true'); // Armazena o consentimento
+  cookieConsentBanner.style.display = 'none'; // Esconde o banner
+});
