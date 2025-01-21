@@ -646,7 +646,7 @@ footer .footer-logo img {
 }
 
 .politica-privacidade h2 {
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -655,7 +655,7 @@ footer .footer-logo img {
   font-size: 1.8rem;
   margin-top: 30px;
   margin-bottom: 15px;
-  color: #fff;
+  color: #000;
 }
 
 .politica-privacidade p {
@@ -756,5 +756,5 @@ footer a[href="/politica-de-privacidade"]:hover {
   background: linear-gradient(to right, #ff0000, #e8ea46, #8dfffb, #0037c2, #000000);
   color: #000; /* Cor do texto ao passar o mouse */
   border-color: transparent; /* Remove a borda ao passar o mouse */
-  transform: scale(1.05); /* Efeito de escala suave */
+  transform: scale(1.0); /* Efeito de escala suave */
 }
