@@ -714,26 +714,25 @@ footer .footer-privacy a:hover {
   color: #128C7E;
 }
 
-/* Banner de Consentimento de Cookies */
+/* Estilo para o banner de cookies */
 .cookie-consent-banner {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 300px;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background-color: rgba(0, 0, 0, 0.9);
   color: #fff;
   padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
   z-index: 1000;
   display: none;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .cookie-consent-banner p {
   margin: 0;
   font-size: 0.8rem;
-  line-height: 1.4;
-  text-align: center;
+  line-height: 1.5;
 }
 
 .cookie-consent-banner a {
@@ -742,19 +741,30 @@ footer .footer-privacy a:hover {
   font-weight: bold;
 }
 
-.cookie-consent-button {
+.cookie-consent-banner .cookie-buttons {
+  margin-top: 10px;
+}
+
+.cookie-consent-banner .cookie-buttons button {
   background-color: #25D366;
   color: #fff;
   border: none;
   padding: 8px 15px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 0.8rem;
-  margin-top: 10px;
-  width: 100%;
+  font-size: 0.9rem;
+  margin: 0 5px;
   transition: background-color 0.3s ease;
 }
 
-.cookie-consent-button:hover {
+.cookie-consent-banner .cookie-buttons button:hover {
   background-color: #128C7E;
+}
+
+.cookie-consent-banner .cookie-buttons button.cookie-decline {
+  background-color: #ff0000;
+}
+
+.cookie-consent-banner .cookie-buttons button.cookie-decline:hover {
+  background-color: #cc0000;
 }
