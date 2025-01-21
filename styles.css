@@ -357,26 +357,30 @@ html {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Botões de Navegação */
+/* Botões de Navegação do Carrossel */
 .carousel-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: linear-gradient(90deg, rgba(255, 0, 0, 0.8), rgba(232, 234, 70, 0.8), rgba(141, 255, 251, 0.8), rgba(0, 55, 194, 0.8), rgba(0, 0, 0, 0.8));
-  background-size: 200% auto;
-  animation: gradientAnimation 5s linear infinite;
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo preto semi-transparente */
   border: none;
-  color: white;
+  color: #fff;
   font-size: 1.5rem;
   padding: 10px;
   cursor: pointer;
   border-radius: 50%;
   z-index: 10;
-  transition: transform 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
 }
 
 .carousel-button:hover {
-  transform: scale(1.1);
+  background: linear-gradient(to right, #ff0000, #e8ea46, #8dfffb, #0037c2, #000000);
+  color: #000;
 }
 
 .carousel-button.prev {
