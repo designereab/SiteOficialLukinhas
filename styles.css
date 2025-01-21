@@ -100,7 +100,7 @@ header .container {
   width: 30px;
   height: 2px;
   background-color: #fff;
-  margin-left: 0 auto;
+  margin-left: 0px auto;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
