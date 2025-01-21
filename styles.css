@@ -633,3 +633,54 @@ footer .footer-logo img {
   margin: 10px auto;
   background: none;
 }
+
+/* Estilos específicos para a página de Política de Privacidade */
+.politica-privacidade {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.politica-privacidade h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.politica-privacidade h3 {
+  font-size: 1.8rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.politica-privacidade p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.politica-privacidade ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.politica-privacidade ul li {
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+.politica-privacidade a {
+  color: #25D366; /* Cor do WhatsApp para consistência */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.politica-privacidade a:hover {
+  color: #128C7E; /* Cor mais escura ao passar o mouse */
+}
