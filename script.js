@@ -4,11 +4,10 @@ const navList = document.getElementById('nav-list');
 
 if (mobileMenu && navList) {
   mobileMenu.addEventListener('click', (event) => {
-    event.stopPropagation(); // Impede que o clique se propague para o documento
+    event.stopPropagation();
     const isActive = navList.classList.toggle('active');
     mobileMenu.setAttribute('aria-expanded', isActive);
   });
-}
 
   // Fechar o menu ao clicar em um link
   const closeMenuOnLinkClick = () => {
@@ -66,14 +65,12 @@ const videoGallerySlides = document.querySelectorAll('.video-gallery-slide');
 let currentGalleryIndex = 0;
 
 if (videoGalleryWrapper && prevGalleryButton && nextGalleryButton && videoGallerySlides.length > 0) {
-  // Função para mostrar o slide atual
   const showSlide = (index) => {
     videoGallerySlides.forEach((slide, i) => {
       slide.classList.toggle('active', i === index);
     });
   };
 
-  // Função para mover a galeria
   const moveGallery = (direction) => {
     if (direction === 'next') {
       currentGalleryIndex = (currentGalleryIndex + 1) % videoGallerySlides.length;
@@ -83,11 +80,9 @@ if (videoGalleryWrapper && prevGalleryButton && nextGalleryButton && videoGaller
     showSlide(currentGalleryIndex);
   };
 
-  // Eventos para os botões de navegação
   prevGalleryButton.addEventListener('click', () => moveGallery('prev'));
   nextGalleryButton.addEventListener('click', () => moveGallery('next'));
 
-  // Mostrar o primeiro slide ao carregar a página
   showSlide(currentGalleryIndex);
 }
 
@@ -96,16 +91,14 @@ const cookieConsentBanner = document.getElementById('cookie-consent-banner');
 const acceptCookiesButton = document.getElementById('accept-cookies');
 
 if (cookieConsentBanner && acceptCookiesButton) {
-  // Verifica se o usuário já aceitou os cookies
   const hasAcceptedCookies = localStorage.getItem('cookies-accepted');
 
   if (!hasAcceptedCookies) {
-    cookieConsentBanner.style.display = 'flex'; // Mostra o banner se o usuário não aceitou
+    cookieConsentBanner.style.display = 'block';
   }
 
-  // Função para aceitar os cookies
   acceptCookiesButton.addEventListener('click', () => {
-    localStorage.setItem('cookies-accepted', 'true'); // Armazena o consentimento
-    cookieConsentBanner.style.display = 'none'; // Esconde o banner
+    localStorage.setItem('cookies-accepted', 'true');
+    cookieConsentBanner.style.display = 'none';
   });
 }
