@@ -87,6 +87,7 @@ if (videoGalleryWrapper && prevGalleryButton && nextGalleryButton && videoGaller
 }
 
 // Controle do banner de cookies
+document.addEventListener('DOMContentLoaded', () => {
 const cookieConsentBanner = document.getElementById('cookie-consent-banner');
 const acceptCookiesButton = document.getElementById('accept-cookies');
 
