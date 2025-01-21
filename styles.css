@@ -566,14 +566,14 @@ footer .footer-logo img {
 /* Estilo para o texto no rodapé */
 footer .footer-text p {
   margin: 0; /* Remove a margem padrão do parágrafo */
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 /* Estilo para o link da Política de Privacidade no rodapé */
 footer .footer-privacy a {
   color: #fff;
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
   padding: 5px 10px;
   border-radius: 5px;
