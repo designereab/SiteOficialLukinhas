@@ -97,7 +97,7 @@ header .container {
   flex-direction: column;
   cursor: pointer;
   z-index: 1000;
-  margin-left: 20px; /* Ajuste a margem esquerda para alinhar com o conteúdo */
+  margin-left: 4px; /* Ajuste a margem esquerda para alinhar com o conteúdo */
 }
 
 .menu-toggle .bar {
@@ -163,8 +163,9 @@ nav ul.nav-list li a:hover {
 /* Ícones de Redes Sociais (lado direito) */
 .social-icons {
   display: flex;
-  gap: 15px;
+  gap: 15px; /* Espaçamento entre os ícones */
   align-items: center;
+  margin-left: auto; /* Empurra os ícones para a direita */
 }
 
 .social-icons a {
