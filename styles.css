@@ -16,18 +16,18 @@ body {
 /* Títulos principais com fundo preto e letras brancas */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
-  font-weight: 700; /* Negrito */
-  color: #fff; /* Cor do texto branca */
-  margin-bottom: 100px; /* Aumentei a distância para 40px */
-  text-align: center; /* Centraliza os títulos */
-  font-size: 1.7rem; /* Tamanho dos títulos reduzido */
-  padding: 10px 20px; /* Espaçamento interno para o fundo */
-  display: block; /* Centraliza o título */
-  background: rgba(0, 0, 0, 0.7); /* Fundo preto com transparência */
-  border-radius: 100px; /* Bordas arredondadas */
-  margin: 0 auto; /* Centraliza o título */
-  width: fit-content; /* Ajusta o fundo ao tamanho do texto */
-  animation: none; /* Remove a animação de gradiente */
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 100px;
+  text-align: center;
+  font-size: 1.7rem;
+  padding: 10px 20px;
+  display: block;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 100px;
+  margin: 0 auto;
+  width: fit-content;
+  animation: none;
 }
 
 /* Vídeo de fundo */
@@ -109,13 +109,13 @@ header .logo img {
 /* Navegação (lado esquerdo, alinhada com o ícone do menu) */
 nav {
   position: fixed;
-  top: 60px; /* Distância do topo */
-  left: 230px; /* Posiciona o menu à esquerda, alinhado com o ícone */
+  top: 60px;
+  left: 230px;
   background-color: rgba(17, 17, 17, 0.9);
   border-radius: 5px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   display: none;
-  z-index: 1001; /* Garante que o menu fique acima de outros elementos */
+  z-index: 1001;
 }
 
 nav.active {
@@ -125,7 +125,7 @@ nav.active {
 nav ul.nav-list {
   list-style: none;
   padding: 10px;
-  margin: 0; /* Remove margens padrão */
+  margin: 0;
 }
 
 nav ul.nav-list li {
@@ -175,17 +175,17 @@ nav ul.nav-list li a:hover {
 
 /* Ajuste do scroll para compensar o cabeçalho fixo */
 html {
-  scroll-padding-top: 80px; /* Ajuste conforme a altura do seu cabeçalho */
+  scroll-padding-top: 80px;
 }
 
 /* Botão de retornar ao topo */
 #back-to-top {
-  display: none; /* Escondido por padrão */
+  display: none;
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 900;
-  background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro com transparência */
+  background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -209,37 +209,37 @@ html {
 .welcome-header {
   position: relative;
   text-align: center;
-  padding: 400px 10px; /* Aumentei o padding para aumentar a área */
-  background: rgba(0, 0, 0, 0.3); /* Fundo com mais transparência */
+  padding: 400px 10px;
+  background: rgba(0, 0, 0, 0.3);
   color: #fff;
   z-index: 2;
   margin-top: 10px;
 }
 
 .welcome-header h1 {
-  font-size: 3.5rem; /* Aumentei o tamanho do texto */
+  font-size: 3.5rem;
   animation: fadeIn 2s ease-in-out;
-  margin-bottom: 30px; /* Aumentei a margem inferior */
-  background: none; /* Remove o fundo do título */
-  padding: 0; /* Remove o padding */
+  margin-bottom: 30px;
+  background: none;
+  padding: 0;
 }
 
 .welcome-header .listen-button {
   display: inline-block;
   padding: 15px 30px;
-  background: linear-gradient(90deg, rgba(255, 0, 0, 0.8), rgba(232, 234, 70, 0.8), rgba(141, 255, 251, 0.8), rgba(0, 55, 194, 0.8), rgba(0, 0, 0, 0.8)); /* Degradê com transparência */
-  background-size: 200% auto; /* Tamanho do gradiente */
-  animation: gradientAnimation 5s linear infinite; /* Animação do gradiente */
+  background: linear-gradient(90deg, rgba(255, 0, 0, 0.8), rgba(232, 234, 70, 0.8), rgba(141, 255, 251, 0.8), rgba(0, 55, 194, 0.8), rgba(0, 0, 0, 0.8));
+  background-size: 200% auto;
+  animation: gradientAnimation 5s linear infinite;
   color: #000;
   text-decoration: none;
   border-radius: 50px;
-  font-size: 1.5rem; /* Aumentei o tamanho do texto */
+  font-size: 1.5rem;
   font-weight: bold;
   transition: transform 0.3s ease;
 }
 
 .welcome-header .listen-button:hover {
-  transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+  transform: scale(1.1);
 }
 
 /* Animação do gradiente */
@@ -269,15 +269,15 @@ html {
 
 /* Seções */
 .section {
-  margin-top: 100px; /* distancia de um titulo para outro*/
-  padding: 10px 10px; /* Espaçamento interno reduzido */
+  margin-top: 100px;
+  padding: 10px 10px;
   position: relative;
   z-index: 2;
   animation: zoomIn 1s ease-in-out;
 }
 
 .section p {
-  margin-top: 60px; /* Aumentei a distância para 40px */
+  margin-top: 60px;
   font-size: 1.1rem;
   line-height: 1.8rem;
   text-align: center;
@@ -307,7 +307,7 @@ html {
 
 #musicas iframe {
   margin-top: 20px;
-  border: none; /* Remove a borda padrão do iframe */
+  border: none;
 }
 
 /* Seção de Vídeos */
@@ -340,8 +340,8 @@ html {
 }
 
 .video-player {
-  width: 15%; /* Reduzido para 50% da proporção atual */
-  max-width: 400px; /* Limite de largura */
+  width: 15%;
+  max-width: 400px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
@@ -355,7 +355,7 @@ html {
 }
 
 .video-player:hover {
-  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+  transform: scale(1.05);
 }
 
 /* Animação de flutuação para os vídeos */
@@ -399,11 +399,11 @@ html {
 }
 
 #contato .container h2 {
-  margin-bottom: 0px; /* Reduzi a margem inferior do título */
+  margin-bottom: 0px;
 }
 
 #contato .container p {
-  margin-top: 20px; /* Reduzi a margem superior da frase */
+  margin-top: 20px;
 }
 
 /* Seção de Presskit */
@@ -443,7 +443,7 @@ footer {
   background-color: rgba(0, 0, 0, 0.9);
   color: #fff;
   text-align: center;
-  padding: 20px 0; /* Aumentei o padding para dar espaço ao logotipo */
+  padding: 20px 0;
   margin-top: 50px;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
   position: relative;
@@ -454,65 +454,65 @@ footer .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px; /* Espaçamento entre o texto e o logotipo */
+  gap: 20px;
 }
 
 /* Estilo para o logotipo no rodapé */
 footer .footer-logo img {
-  height: 40px; /* Ajuste o tamanho do logotipo conforme necessário */
-  width: auto; /* Mantém a proporção da imagem */
-  border-radius: 5px; /* Opcional: bordas arredondadas */
-  filter: brightness(0) invert(1); /* Transforma o logotipo em branco */
+  height: 40px;
+  width: auto;
+  border-radius: 5px;
+  filter: brightness(0) invert(1);
 }
 
 /* Seção de Agenda */
 #agenda {
-  padding: 10px 30px; /* Espaçamento interno */
+  padding: 10px 30px;
   position: relative;
   z-index: 2;
-  background: linear-gradient(135deg, rgba(255, 0, 0, 0.8), rgba(232, 234, 70, 0.8), rgba(141, 255, 251, 0.8), rgba(0, 55, 194, 0.8), rgba(0, 0, 0, 0.8)); /* Degradê com transparência */
-  background-size: 200% 200%; /* Tamanho do gradiente */
-  animation: gradientAnimation 10s ease infinite; /* Animação do gradiente */
-  border-radius: 20px; /* Bordas arredondadas */
-  margin: 20px auto; /* Margem para centralizar */
-  max-width: 1200px; /* Largura máxima */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  background: linear-gradient(135deg, rgba(255, 0, 0, 0.8), rgba(232, 234, 70, 0.8), rgba(141, 255, 251, 0.8), rgba(0, 55, 194, 0.8), rgba(0, 0, 0, 0.8));
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s ease infinite;
+  border-radius: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Lista de Eventos */
 .eventos-lista {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Layout em grid responsivo */
-  gap: 20px; /* Espaçamento entre os eventos */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
   max-width: 1200px;
   margin: 20px auto;
-  padding: 20px; /* Espaçamento interno */
+  padding: 20px;
 }
 
 /* Card de Evento */
 .evento {
-  background: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 20px;
-  backdrop-filter: blur(10px); /* Efeito de desfoque */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .evento:hover {
-  transform: translateY(-5px); /* Efeito de levantar ao passar o mouse */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Data do Evento */
 .evento .data {
   text-align: center;
   margin-bottom: 20px;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(20, 20, 20, 0.8), rgba(0, 0, 0, 0.8)); /* Degradê igual ao dos títulos */
-  background-size: 200% auto; /* Tamanho do gradiente */
-  animation: gradientAnimation 5s linear infinite; /* Animação do gradiente */
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(20, 20, 20, 0.8), rgba(0, 0, 0, 0.8));
+  background-size: 200% auto;
+  animation: gradientAnimation 5s linear infinite;
   font-size: 3rem;
-  color: #fff; /* Texto branco */
+  color: #fff;
   padding: 10px;
   border-radius: 10px;
 }
@@ -520,92 +520,87 @@ footer .footer-logo img {
 /* Informações do Evento */
 .evento .info {
   text-align: center;
-  background: none; /* Garante que o fundo do .info não tenha degradê */
+  background: none;
 }
 
 .evento .info h3 {
   font-size: 2.0rem;
   font-weight: 600;
-  color: #fff; /* Título branco */
+  color: #fff;
   margin-bottom: 10px;
-  background: none; /* Remove qualquer fundo do título */
+  background: none;
 }
 
 .evento .info p {
   font-size: 1.5rem;
-  color: #000; /* Texto preto */
+  color: #000;
   margin: 10px auto;
-  background: none; /* Remove qualquer fundo do parágrafo */
+  background: none;
 }
 
-/* Responsividade */
+/* Estilo do Carrossel de Vídeos */
+.video-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.video-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.video-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.video-player {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Botões de Navegação */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+/* Responsividade para Mobile */
 @media (max-width: 768px) {
-  header .logo img {
-    height: 15px; /* Reduz o tamanho do logotipo no mobile */
+  .video-player {
+    height: 200px;
   }
 
-  header {
-    padding: 10px 0; /* Reduz o padding do header no mobile */
-  }
-
-  header .container {
-    padding: 0 10px; /* Reduz o padding interno do container no mobile */
-    flex-direction: row; /* Mantém o layout em linha */
-    align-items: center; /* Centraliza os itens verticalmente */
-    justify-content: space-between; /* Distribui o espaço entre os itens */
-  }
-
-  header .logo {
-    flex: 0; /* Remove o flex para o logotipo não ocupar espaço extra */
-    margin: 0; /* Remove a margem do logotipo */
-  }
-
-  .social-icons {
-    gap: 10px; /* Reduz o espaçamento entre os ícones no mobile */
-    margin: 0; /* Remove a margem dos ícones sociais */
-  }
-
-  .social-icons a {
-    font-size: 1.2rem; /* Reduz o tamanho dos ícones no mobile */
-    width: 30px; /* Reduz a largura dos ícones no mobile */
-    height: 30px; /* Reduz a altura dos ícones no mobile */
-  }
-
-  .menu-toggle .bar {
-    width: 25px; /* Reduz a largura das barras do menu hambúrguer no mobile */
-    height: 2px; /* Mantém a altura das barras */
-    margin: 3px 0; /* Reduz o espaçamento entre as barras */
-  }
-
-  nav {
-    top: 50px; /* Ajusta a posição do menu no mobile */
-    left: 10px; /* Ajusta a posição do menu no mobile */
-    width: 80%; /* Reduz a largura do menu no mobile */
-  }
-
-  nav ul.nav-list li a {
-    padding: 5px; /* Reduz o padding dos links no mobile */
-    font-size: 0.9rem; /* Reduz o tamanho da fonte dos links no mobile */
-  }
-
-  html {
-    scroll-padding-top: 60px; /* Ajusta o scroll-padding para o header menor */
-  }
-
-  .eventos-lista {
-    grid-template-columns: 1fr; /* Uma coluna em dispositivos móveis */
-  }
-
-  #agenda h2 {
-    font-size: 2rem; /* Título menor em dispositivos móveis */
-  }
-
-  .evento .data .dia {
-    font-size: 2rem; /* Tamanho menor para a data */
-  }
-
-  .evento .data .mes {
-    font-size: 1rem; /* Tamanho menor para o mês */
+  .carousel-button {
+    font-size: 1.2rem;
+    padding: 8px;
   }
 
   .videos-container {
@@ -633,7 +628,7 @@ footer .footer-logo img {
   }
 
   nav {
-    top: 80px; /* Ajuste para o menu mobile */
-    left: 10px; /* Ajuste para o menu mobile */
+    top: 80px;
+    left: 10px;
   }
 }
