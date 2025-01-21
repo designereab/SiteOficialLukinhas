@@ -143,7 +143,7 @@ nav ul.nav-list {
 }
 
 nav ul.nav-list li {
-  margin: 10px 0;
+  margin: 8px 0;
 }
 
 nav ul.nav-list li a {
@@ -163,7 +163,7 @@ nav ul.nav-list li a:hover {
 /* Ícones de Redes Sociais (lado direito) */
 .social-icons {
   display: flex;
-  gap: 15px; /* Espaçamento entre os ícones */
+  gap: 12px; /* Espaçamento entre os ícones */
   align-items: center;
   margin-left: auto; /* Empurra os ícones para a direita */
 }
@@ -469,7 +469,7 @@ html {
   }
 
   header .logo {
-    text-align: left;
+    text-align: center;
     margin-top: 10px;
   }
 
