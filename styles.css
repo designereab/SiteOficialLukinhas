@@ -661,10 +661,10 @@ footer .footer-privacy a:hover {
 
 /* Estilos específicos para a página de Política de Privacidade */
 .politica-privacidade {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
-  background: #000;
+  background: #fff;
   border-radius: 10px;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
