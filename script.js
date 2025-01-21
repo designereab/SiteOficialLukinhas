@@ -40,20 +40,22 @@ if (mobileMenu && navList) {
 // Botão de retornar ao topo
 const backToTopButton = document.getElementById('back-to-top');
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    backToTopButton.style.display = 'flex';
-  } else {
-    backToTopButton.style.display = 'none';
-  }
-});
-
-backToTopButton.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
+if (backToTopButton) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopButton.style.display = 'flex';
+    } else {
+      backToTopButton.style.display = 'none';
+    }
   });
-});
+
+  backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
 
 // Controle da Galeria de Vídeos
 const videoGalleryWrapper = document.querySelector('.video-gallery-wrapper');
@@ -62,43 +64,47 @@ const nextGalleryButton = document.querySelector('.gallery-button.next');
 const videoGallerySlides = document.querySelectorAll('.video-gallery-slide');
 let currentGalleryIndex = 0;
 
-// Função para mostrar o slide atual
-const showSlide = (index) => {
-  videoGallerySlides.forEach((slide, i) => {
-    slide.classList.toggle('active', i === index);
-  });
-};
+if (videoGalleryWrapper && prevGalleryButton && nextGalleryButton && videoGallerySlides.length > 0) {
+  // Função para mostrar o slide atual
+  const showSlide = (index) => {
+    videoGallerySlides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+  };
 
-// Função para mover a galeria
-const moveGallery = (direction) => {
-  if (direction === 'next') {
-    currentGalleryIndex = (currentGalleryIndex + 1) % videoGallerySlides.length;
-  } else if (direction === 'prev') {
-    currentGalleryIndex = (currentGalleryIndex - 1 + videoGallerySlides.length) % videoGallerySlides.length;
-  }
+  // Função para mover a galeria
+  const moveGallery = (direction) => {
+    if (direction === 'next') {
+      currentGalleryIndex = (currentGalleryIndex + 1) % videoGallerySlides.length;
+    } else if (direction === 'prev') {
+      currentGalleryIndex = (currentGalleryIndex - 1 + videoGallerySlides.length) % videoGallerySlides.length;
+    }
+    showSlide(currentGalleryIndex);
+  };
+
+  // Eventos para os botões de navegação
+  prevGalleryButton.addEventListener('click', () => moveGallery('prev'));
+  nextGalleryButton.addEventListener('click', () => moveGallery('next'));
+
+  // Mostrar o primeiro slide ao carregar a página
   showSlide(currentGalleryIndex);
-};
-
-// Eventos para os botões de navegação
-prevGalleryButton.addEventListener('click', () => moveGallery('prev'));
-nextGalleryButton.addEventListener('click', () => moveGallery('next'));
-
-// Mostrar o primeiro slide ao carregar a página
-showSlide(currentGalleryIndex);
+}
 
 // Controle do banner de cookies
 const cookieConsentBanner = document.getElementById('cookie-consent-banner');
 const acceptCookiesButton = document.getElementById('accept-cookies');
 
-// Verifica se o usuário já aceitou os cookies
-const hasAcceptedCookies = localStorage.getItem('cookies-accepted');
+if (cookieConsentBanner && acceptCookiesButton) {
+  // Verifica se o usuário já aceitou os cookies
+  const hasAcceptedCookies = localStorage.getItem('cookies-accepted');
 
-if (!hasAcceptedCookies) {
-  cookieConsentBanner.style.display = 'flex'; // Mostra o banner se o usuário não aceitou
+  if (!hasAcceptedCookies) {
+    cookieConsentBanner.style.display = 'flex'; // Mostra o banner se o usuário não aceitou
+  }
+
+  // Função para aceitar os cookies
+  acceptCookiesButton.addEventListener('click', () => {
+    localStorage.setItem('cookies-accepted', 'true'); // Armazena o consentimento
+    cookieConsentBanner.style.display = 'none'; // Esconde o banner
+  });
 }
-
-// Função para aceitar os cookies
-acceptCookiesButton.addEventListener('click', () => {
-  localStorage.setItem('cookies-accepted', 'true'); // Armazena o consentimento
-  cookieConsentBanner.style.display = 'none'; // Esconde o banner
-});
