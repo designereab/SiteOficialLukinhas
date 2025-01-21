@@ -55,24 +55,33 @@ backToTopButton.addEventListener('click', () => {
   });
 });
 
-// Controle do Carrossel de Vídeos
-const videoWrapper = document.querySelector('.video-wrapper');
-const prevButton = document.querySelector('.carousel-button.prev');
-const nextButton = document.querySelector('.carousel-button.next');
-const videoSlides = document.querySelectorAll('.video-slide');
-let currentIndex = 0;
+// Controle da Galeria de Vídeos
+const videoGalleryWrapper = document.querySelector('.video-gallery-wrapper');
+const prevGalleryButton = document.querySelector('.gallery-button.prev');
+const nextGalleryButton = document.querySelector('.gallery-button.next');
+const videoGallerySlides = document.querySelectorAll('.video-gallery-slide');
+let currentGalleryIndex = 0;
 
-// Função para mover o carrossel
-const moveCarousel = (direction) => {
+// Função para mostrar o slide atual
+const showSlide = (index) => {
+  videoGallerySlides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index);
+  });
+};
+
+// Função para mover a galeria
+const moveGallery = (direction) => {
   if (direction === 'next') {
-    currentIndex = (currentIndex + 1) % videoSlides.length;
+    currentGalleryIndex = (currentGalleryIndex + 1) % videoGallerySlides.length;
   } else if (direction === 'prev') {
-    currentIndex = (currentIndex - 1 + videoSlides.length) % videoSlides.length;
+    currentGalleryIndex = (currentGalleryIndex - 1 + videoGallerySlides.length) % videoGallerySlides.length;
   }
-  const offset = -currentIndex * 100;
-  videoWrapper.style.transform = `translateX(${offset}%)`;
+  showSlide(currentGalleryIndex);
 };
 
 // Eventos para os botões de navegação
-prevButton.addEventListener('click', () => moveCarousel('prev'));
-nextButton.addEventListener('click', () => moveCarousel('next'));
+prevGalleryButton.addEventListener('click', () => moveGallery('prev'));
+nextGalleryButton.addEventListener('click', () => moveGallery('next'));
+
+// Mostrar o primeiro slide ao carregar a página
+showSlide(currentGalleryIndex);
