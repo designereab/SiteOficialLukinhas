@@ -252,6 +252,16 @@ html {
 }
 
 /* Cabeçalho de Boas-Vindas */
+.welcome-header {
+  position: relative;
+  text-align: center;
+  padding: 40vh 10px;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  z-index: 2;
+  margin-top: 10px;
+}
+
 .welcome-header h1 {
   font-size: 4rem;
   animation: fadeIn 2s ease-in-out, gradientAnimation 5s linear infinite;
@@ -262,17 +272,17 @@ html {
   color: transparent;
   padding: 0;
 }
-
-.welcome-header .welcome-subtext {
-  font-size: 1.5rem; /* Tamanho do texto */
-  margin-bottom: 20px; /* Distância entre o texto e o botão */
-  animation: fadeIn 2s ease-in-out;
-  color: #fff; /* Cor do texto */
-  text-align: center; /* Centraliza o texto */
 }
 
+@media (max-width: 768px) {
+  .welcome-header h1 {
+    font-size: 2.5rem;
+  }
+}
+
+
 .welcome-header .listen-button {
-  display: inline-block;
+display: inline-block;
   padding: 15px 30px;
   background: linear-gradient(90deg, rgba(255, 0, 0, 0.8), rgba(232, 234, 70, 0.8), rgba(141, 255, 251, 0.8), rgba(0, 55, 194, 0.8), rgba(0, 0, 0, 0.8));
   background-size: 200% auto;
@@ -284,8 +294,6 @@ html {
   font-weight: bold;
   transition: transform 0.3s ease;
   margin-top: 20px; /* Distância entre o botão e o texto acima */
-  margin-left: auto; /* Centraliza horizontalmente */
-  margin-right: auto; /* Centraliza horizontalmente */
 }
 
 .welcome-header .listen-button:hover {
@@ -294,19 +302,18 @@ html {
 
 @media (max-width: 768px) {
   .welcome-header h1 {
-    font-size: 2.5rem; /* Tamanho menor para o título em mobile */
-    margin-bottom: 20px; /* Reduz a margem inferior */
+    font-size: 2.5rem;
+    margin-bottom: 20px; /* Ajuste para dispositivos móveis */
   }
 
   .welcome-header .welcome-subtext {
-    font-size: 1rem; /* Tamanho menor para o texto em mobile */
-    margin-bottom: 15px; /* Reduz a margem inferior */
+    font-size: 1rem; /* Tamanho menor para dispositivos móveis */
+    margin-bottom: 15px; /* Ajuste para dispositivos móveis */
   }
 
   .welcome-header .listen-button {
-    font-size: 1.2rem; /* Tamanho menor para o botão em mobile */
-    padding: 10px 20px; /* Reduz o padding do botão */
-    margin-top: 15px; /* Reduz a margem superior */
+    font-size: 1.2rem; /* Tamanho menor para dispositivos móveis */
+    margin-top: 15px; /* Ajuste para dispositivos móveis */
   }
 }
 
@@ -792,3 +799,5 @@ footer .footer-privacy a:hover {
 .cookie-consent-banner .cookie-buttons button.cookie-decline:hover {
   background-color: #cc0000;
 }
+
+com base nesse css, como faço para o texto "confira as novidades..." ter uma distancia padrão do título "bem vindo ao site..." e do botão "ouça agora"
