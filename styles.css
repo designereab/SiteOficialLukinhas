@@ -6,7 +6,7 @@
 }
 
 body {
-  padding-top: 80px; /* Ajuste o valor conforme necessário */
+  padding-top: 60px; /* Ajuste o valor conforme necessário */
   font-family: 'Poppins', sans-serif;
   line-height: 1.5;
   color: #fff;
@@ -255,7 +255,7 @@ html {
 .welcome-header {
   position: relative;
   text-align: center;
-  padding: 40vh 10px;
+  padding: 35vh 10px;
   background: rgba(0, 0, 0, 0.3);
   color: #fff;
   z-index: 2;
