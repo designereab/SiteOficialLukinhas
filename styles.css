@@ -267,7 +267,7 @@ html {
   animation: fadeIn 2s ease-in-out, gradientAnimation 5s linear infinite; /* Adiciona a animação do gradiente */
   margin-bottom: 30px;
   background-color: rgba(0, 0, 0, 0.7); /* Fundo preto com 70% de opacidade */
-  background: linear-gradient(to right, #ffffff, #eeeeee) /* Gradiente no texto */
+  color: linear-gradient(to right, #ffffff, #eeeeee) /* Gradiente no texto */
   background-size: 200% auto; /* Permite o movimento do gradiente */
   -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto */
   color: transparent; /* Torna o texto transparente para mostrar o gradiente */
