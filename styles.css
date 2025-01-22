@@ -17,25 +17,24 @@ body {
 
 /* Títulos principais com fundo preto e letras brancas */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', sans-serif;
+font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #fff;
-  margin-bottom: 60px;
+  color: #fff; /* Texto branco */
+  margin-bottom: 40px; /* Ajuste o espaçamento conforme necessário */
   text-align: center;
   font-size: 1.7rem;
-  padding: 10px 20px;
-  display: block;
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 100px;
-  margin: 0 auto;
+  padding: 0; /* Remover o padding */
+  background: none; /* Remover o fundo */
+  border-radius: 0; /* Remover o border-radius */
+  margin: 0 auto; /* Centralizar o título */
   width: fit-content;
   animation: none;
 }
 
 @media (max-width: 768px) {
   h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 40px;
-  }
+    margin-bottom: 30px; /* Ajuste o espaçamento para dispositivos móveis */
+    font-size: 1.5rem; /* Reduzir o tamanho da fonte em dispositivos móveis */
 }
 
 /* Vídeo de fundo */
