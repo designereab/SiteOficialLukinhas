@@ -263,17 +263,19 @@ html {
 }
 
 .welcome-header h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   animation: fadeIn 2s ease-in-out;
-  margin-bottom: 30px;
-  background: none;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #ff0000, #e8ea46, #8dfffb, #0037c2, #000000);
+  -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto */
+  color: transparent; /* Torna o texto transparente para mostrar o gradiente */
   padding: 0;
 }
 
 .welcome-header p {
   font-size: 1.5rem;
   animation: fadeIn 2s ease-in-out;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   background: none;
   padding: 0;
 }
@@ -281,6 +283,11 @@ html {
 @media (max-width: 768px) {
   .welcome-header h1 {
     font-size: 2.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .welcome-header p {
+    font-size: 1rem;
   }
 }
 
