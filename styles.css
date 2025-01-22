@@ -263,9 +263,9 @@ html {
 }
 
 .welcome-header h1 {
-   font-size: 3.5rem;
+   font-size: 4rem;
   animation: fadeIn 2s ease-in-out, gradientAnimation 5s linear infinite;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   background: linear-gradient(to right, #ff0000, #e8ea46, #8dfffb, #0037c2);
   background-size: 200% auto; /* Aumenta o tamanho do gradiente para permitir o movimento */
   -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto */
