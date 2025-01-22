@@ -26,24 +26,24 @@ body {
 
 /* Estilos para todos os títulos (h1 a h6) */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  color: #fff; /* Texto branco */
+  color: #fff;
+  margin-bottom: 60px; /* Espaçamento abaixo dos títulos */
   text-align: center;
-  font-size: 1.5rem;
-  padding: 0;
-  background: none;
-  border-radius: 0;
+  font-size: 1.7rem;
+  padding: 10px 20px;
+  display: block;
+  background: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+  border-radius: 100px; /* Bordas arredondadas */
   margin: 0 auto; /* Centraliza os títulos */
   width: fit-content; /* Ajusta a largura ao conteúdo */
-  animation: none;
 }
 
 /* Responsividade para títulos em dispositivos móveis */
 @media (max-width: 768px) {
   h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 30px; /* Espaçamento menor em dispositivos móveis */
-    font-size: 1.5rem; /* Tamanho de fonte ajustado para mobile */
+    margin-bottom: 40px; /* Espaçamento menor em dispositivos móveis */
   }
 }
 
@@ -215,6 +215,7 @@ nav ul.nav-list li a:hover {
 
 /* Botão de retornar ao topo */
 #back-to-top {
+  display: none;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -268,25 +269,24 @@ nav ul.nav-list li a:hover {
 }
 
 /* ================================================== */
-/* Seções e Conteúdo Principal */
+/* Cabeçalho de Boas-Vindas */
 /* ================================================== */
 
-/* Cabeçalho de Boas-Vindas */
 .welcome-header {
   position: relative;
   text-align: center;
-  padding: 100px 10px; /* Valor fixo */
-  background: rgba(0, 0, 0, 0.3);
+  padding: 40vh 10px; /* Espaçamento vertical grande para centralizar o conteúdo */
+  background: rgba(0, 0, 0, 0.3); /* Fundo semi-transparente */
   color: #fff;
   z-index: 2;
   margin-top: 10px;
-  min-height: 60vh; /* Garante altura mínima */
 }
 
+/* Título principal */
 .welcome-header h1 {
   font-size: 4rem;
-  animation: fadeIn 2s ease-in-out;
-  margin-bottom: 30px;
+  animation: fadeIn 2s ease-in-out; /* Animação de entrada */
+  margin-bottom: 30px; /* Espaçamento abaixo do título */
   color: #fff;
   padding: 10px 20px;
   border-radius: 10px;
@@ -294,6 +294,14 @@ nav ul.nav-list li a:hover {
   background: none;
 }
 
+/* Texto "Confira as novidades..." */
+.welcome-header .welcome-subtext {
+  font-size: 1.2rem;
+  margin-bottom: 20px; /* Espaçamento abaixo do texto */
+  color: #fff;
+}
+
+/* Botão "Ouça agora" */
 .welcome-header .listen-button {
   display: inline-block;
   padding: 10px 20px;
@@ -306,27 +314,27 @@ nav ul.nav-list li a:hover {
   font-size: 1.5rem;
   font-weight: bold;
   transition: transform 0.3s ease;
-  margin-top: 20px; /* Distância entre o botão e o texto acima */
+  margin-top: 20px; /* Espaçamento acima do botão */
 }
 
 .welcome-header .listen-button:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Efeito de escala ao passar o mouse */
 }
 
 /* Responsividade para o cabeçalho de boas-vindas */
 @media (max-width: 768px) {
   .welcome-header h1 {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Tamanho menor para dispositivos móveis */
     margin-bottom: 20px;
   }
 
   .welcome-header .welcome-subtext {
-    font-size: 1rem;
+    font-size: 1rem; /* Tamanho menor para dispositivos móveis */
     margin-bottom: 15px;
   }
 
   .welcome-header .listen-button {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Tamanho menor para dispositivos móveis */
     margin-top: 15px;
   }
 }
@@ -357,18 +365,6 @@ nav ul.nav-list li a:hover {
   100% {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-/* Animação de zoom suave para as seções */
-@keyframes zoomIn {
-  0% {
-    transform: scale(0.95);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
   }
 }
 
