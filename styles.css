@@ -102,13 +102,13 @@ header {
 /* Container do cabeçalho */
 header .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Distribui os elementos */
   align-items: center;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
-  position: relative; /* Permite posicionar o nav corretamente */
+  position: relative;
 }
 
 /* Menu Hambúrguer */
@@ -280,13 +280,17 @@ nav ul.nav-list li a:hover {
   color: #fff;
   z-index: 2;
   margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
 }
 
 /* Título principal */
 .welcome-header h1 {
   font-size: 4rem;
   animation: fadeIn 2s ease-in-out; /* Animação de entrada */
-  margin-bottom: 30px; /* Espaçamento abaixo do título */
+  margin-bottom: 20px; /* Espaçamento abaixo do título */
   color: #fff;
   padding: 10px 20px;
   border-radius: 10px;
@@ -297,8 +301,10 @@ nav ul.nav-list li a:hover {
 /* Texto "Confira as novidades..." */
 .welcome-header .welcome-subtext {
   font-size: 1.2rem;
-  margin-bottom: 20px; /* Espaçamento abaixo do texto */
+  margin-bottom: 30px; /* Espaçamento abaixo do texto */
   color: #fff;
+  max-width: 600px; /* Limita a largura do texto */
+  line-height: 1.6; /* Melhora a legibilidade */
 }
 
 /* Botão "Ouça agora" */
@@ -323,14 +329,18 @@ nav ul.nav-list li a:hover {
 
 /* Responsividade para o cabeçalho de boas-vindas */
 @media (max-width: 768px) {
+  .welcome-header {
+    padding: 20vh 10px; /* Reduz o espaçamento vertical */
+  }
+
   .welcome-header h1 {
     font-size: 2.5rem; /* Tamanho menor para dispositivos móveis */
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   .welcome-header .welcome-subtext {
     font-size: 1rem; /* Tamanho menor para dispositivos móveis */
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   .welcome-header .listen-button {
