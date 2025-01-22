@@ -265,7 +265,7 @@ html {
 .welcome-header h1 {
    font-size: 3.5rem;
   animation: fadeIn 2s ease-in-out, gradientAnimation 5s linear infinite;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   background: linear-gradient(to right, #ff0000, #e8ea46, #8dfffb, #0037c2);
   background-size: 200% auto; /* Aumenta o tamanho do gradiente para permitir o movimento */
   -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto */
@@ -275,9 +275,9 @@ html {
 }
 
 .welcome-header p {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   animation: fadeIn 2s ease-in-out;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   background: none;
   padding: 0;
 }
@@ -289,7 +289,7 @@ html {
 }
 @media (max-width: 768px) {
   .welcome-header p {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
