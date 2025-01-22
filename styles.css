@@ -1,7 +1,4 @@
-/* ================================================== */
-/* Reset e Estilos Globais */
-/* ================================================== */
-
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -9,55 +6,39 @@
 }
 
 body {
-  padding-top: 60px; /* Espaço para o cabeçalho fixo */
+  padding-top: 60px; /* Ajuste o valor conforme necessário */
   font-family: 'Poppins', sans-serif;
   line-height: 1.5;
   color: #fff;
   position: relative;
   overflow-x: hidden;
   min-height: 100vh;
-  background: rgba(0, 0, 0, 0.7); /* Fundo escuro para contraste */
 }
 
-/* ================================================== */
-/* Container Centralizado */
-/* ================================================== */
-
-.container {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* ================================================== */
-/* Estilos de Títulos */
-/* ================================================== */
-
+/* Títulos principais com fundo preto e letras brancas */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   color: #fff;
-  margin: 0 auto 60px;
+  margin-bottom: 60px;
   text-align: center;
   font-size: 1.7rem;
   padding: 10px 20px;
+  display: block;
   background: rgba(0, 0, 0, 0.7);
   border-radius: 100px;
+  margin: 0 auto;
   width: fit-content;
+  animation: none;
 }
 
 @media (max-width: 768px) {
   h1, h2, h3, h4, h5, h6 {
     margin-bottom: 40px;
-    font-size: 1.5rem;
   }
 }
 
-/* ================================================== */
-/* Vídeo de Fundo e Overlay */
-/* ================================================== */
-
+/* Vídeo de fundo */
 .video-background {
   position: fixed;
   top: 0;
@@ -74,6 +55,7 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: cover;
 }
 
+/* Camada de sombra sobre o vídeo */
 .video-overlay {
   position: absolute;
   top: 0;
@@ -84,12 +66,9 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1;
 }
 
-/* ================================================== */
-/* Cabeçalho e Navegação */
-/* ================================================== */
-
+/* Cabeçalho */
 header {
-  position: fixed;
+ position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -98,19 +77,29 @@ header {
   transition: background-color 0.3s ease;
   padding: 15px 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
 }
 
 header .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Centraliza os elementos */
   align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative; /* Permite posicionar o nav corretamente */
 }
 
+/* Menu Hambúrguer (lado esquerdo) */
 .menu-toggle {
-  display: none;
+  display: flex;
   flex-direction: column;
   cursor: pointer;
   z-index: 1000;
+  margin-right: auto; /* Empurra o ícone de menu para a esquerda */
 }
 
 .menu-toggle .bar {
@@ -121,59 +110,93 @@ header .container {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* Logotipo centralizada */
 header .logo {
   text-align: center;
+  margin: 0 auto; /* Centraliza a logo */
 }
 
 header .logo img {
   height: 20px;
 }
 
+/* Navegação (alinhada com o ícone do menu) */
 nav {
-  display: flex;
-  align-items: center;
+  position: absolute;
+  top: 60px; /* Ajuste conforme necessário */
+  left: 20px; /* Ajuste conforme necessário */
+  background-color: rgba(17, 17, 17, 0.9);
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: none;
+  z-index: 1001;
+  padding: 10px;
+  width: 200px;
+}
+
+nav.active {
+  display: block;
 }
 
 nav ul.nav-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  gap: 20px;
+}
+
+nav ul.nav-list li {
+  margin: 8px 0;
 }
 
 nav ul.nav-list li a {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 nav ul.nav-list li a:hover {
-  color: #e8ea46;
+  background: linear-gradient(to right, #ff0000, #e8ea46, #8dfffb, #0037c2, #000000);
+  color: #000;
 }
 
+/* Ícones de Redes Sociais (lado direito) */
 .social-icons {
   display: flex;
   gap: 12px;
   align-items: center;
+  margin-left: auto; /* Empurra os ícones de redes sociais para a direita */
 }
 
 .social-icons a {
   color: #fff;
   font-size: 1.5rem;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  padding: 5px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .social-icons a:hover {
-  color: #e8ea46;
+  background: linear-gradient(to right, #ff0000, #e8ea46, #8dfffb, #0037c2, #000000);
+  color: #000;
+  transform: scale(1.1);
 }
 
-/* ================================================== */
-/* Botões e Interações */
-/* ================================================== */
+/* Ajuste do scroll para compensar o cabeçalho fixo */
+html {
+  scroll-padding-top: 80px;
+}
 
+/* Botão de retornar ao topo */
 #back-to-top {
   display: none;
   position: fixed;
@@ -188,35 +211,47 @@ nav ul.nav-list li a:hover {
   height: 40px;
   font-size: 1.2rem;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #back-to-top:hover {
-  background-color: rgba(255, 255, 255, 0.9);
+  background: linear-gradient(to right, #ff0000, #e8ea46, #8dfffb, #0037c2, #000000);
   color: #000;
   transform: scale(1.1);
+  opacity: 0.9;
 }
 
+/* Estilo do botão do WhatsApp */
 .whatsapp-button {
   display: inline-block;
   padding: 15px 30px;
   background: linear-gradient(90deg, #25D366, #128C7E, #075E54);
+  background-size: 200% auto;
+  animation: gradientAnimation 5s linear infinite;
   color: #fff;
   text-decoration: none;
   border-radius: 50px;
   font-size: 1.2rem;
   font-weight: bold;
   transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .whatsapp-button:hover {
   transform: scale(1.1);
 }
 
-/* ================================================== */
-/* Cabeçalho de Boas-Vindas */
-/* ================================================== */
+.whatsapp-button i {
+  margin-right: 10px;
+}
 
+/* Cabeçalho de Boas-Vindas */
 .welcome-header {
   position: relative;
   text-align: center;
@@ -224,31 +259,40 @@ nav ul.nav-list li a:hover {
   background: rgba(0, 0, 0, 0.3);
   color: #fff;
   z-index: 2;
+  margin-top: 10px;
 }
 
 .welcome-header h1 {
   font-size: 4rem;
   animation: fadeIn 2s ease-in-out;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  color: #fff; /* Texto branco */
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block;
+  background: none; /* Remove o fundo */
 }
 
-.welcome-header .welcome-subtext {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  max-width: 600px;
-  line-height: 1.6;
+@media (max-width: 768px) {
+  .welcome-header h1 {
+    font-size: 2.5rem;
+  }
 }
+
 
 .welcome-header .listen-button {
-  display: inline-block;
+display: inline-block;
   padding: 10px 20px;
   background: linear-gradient(90deg, rgba(255, 0, 0, 0.8), rgba(232, 234, 70, 0.8), rgba(141, 255, 251, 0.8), rgba(0, 55, 194, 0.8), rgba(0, 0, 0, 0.8));
+  background-size: 200% auto;
+  animation: gradientAnimation 5s linear infinite;
   color: #000;
   text-decoration: none;
   border-radius: 50px;
   font-size: 1.5rem;
   font-weight: bold;
   transition: transform 0.3s ease;
+  margin-top: 20px; /* Distância entre o botão e o texto acima */
 }
 
 .welcome-header .listen-button:hover {
@@ -256,27 +300,23 @@ nav ul.nav-list li a:hover {
 }
 
 @media (max-width: 768px) {
-  .welcome-header {
-    padding: 20vh 10px;
-  }
-
   .welcome-header h1 {
     font-size: 2.5rem;
+    margin-bottom: 20px; /* Ajuste para dispositivos móveis */
   }
 
   .welcome-header .welcome-subtext {
-    font-size: 1rem;
+    font-size: 1rem; /* Tamanho menor para dispositivos móveis */
+    margin-bottom: 15px; /* Ajuste para dispositivos móveis */
   }
 
   .welcome-header .listen-button {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Tamanho menor para dispositivos móveis */
+    margin-top: 15px; /* Ajuste para dispositivos móveis */
   }
 }
 
-/* ================================================== */
-/* Animações */
-/* ================================================== */
-
+/* Animação do gradiente */
 @keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
@@ -289,6 +329,7 @@ nav ul.nav-list li a:hover {
   }
 }
 
+/* Animação de entrada do título */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -300,10 +341,230 @@ nav ul.nav-list li a:hover {
   }
 }
 
-/* ================================================== */
-/* Rodapé */
-/* ================================================== */
+/* Seções */
+.section {
+  margin-top: 100px;
+  padding: 10px 10px;
+  position: relative;
+  z-index: 2;
+  animation: zoomIn 1s ease-in-out;
+}
 
+.section p {
+  margin-top: 60px;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+/* Animação de zoom suave para as seções */
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Seção de Músicas */
+#musicas .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#musicas iframe {
+  margin-top: 20px;
+  border: none;
+}
+
+/* Seção de Vídeos */
+#videos .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.youtube-embed {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.youtube-embed iframe {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Galeria de Vídeos */
+.video-gallery {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.video-gallery-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.video-gallery-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.video-gallery-slide.active {
+  display: block;
+}
+
+.video-player {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Botões de Navegação da Galeria */
+.gallery-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.gallery-button:hover {
+  background: linear-gradient(to right, #ff0000, #e8ea46, #8dfffb, #0037c2, #000000);
+  color: #000;
+}
+
+.gallery-button.prev {
+  left: 10px;
+}
+
+.gallery-button.next {
+  right: 10px;
+}
+
+/* Responsividade para Mobile */
+@media (max-width: 768px) {
+  .video-player {
+    height: 200px;
+  }
+
+  .gallery-button {
+    font-size: 1rem;
+    width: 30px;
+    height: 30px;
+  }
+
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .menu-toggle {
+    margin-left: 0px;
+  }
+
+  header .logo {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  header .logo img {
+    height: 30px;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  .social-icons a {
+    font-size: 1.2rem;
+  }
+
+  nav {
+    top: 100px;
+    left: 20px;
+  }
+}
+
+/* Seção de Contato */
+#contato .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#contato .container h2 {
+  margin-bottom: 0px;
+}
+
+#contato .container p {
+  margin-top: 20px;
+}
+
+/* Seção de Presskit */
+#presskit .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#presskit .container h2 {
+  margin-bottom: 20px;
+}
+
+#presskit .container a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+  padding: 5px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#presskit .container a:hover {
+  background: linear-gradient(to right, #ff0000, #e8ea46, #8dfffb, #0037c2, #000000);
+  color: #000;
+}
+
+/* Estilo para o rodapé */
 footer {
   background-color: rgba(0, 0, 0, 0.9);
   color: #fff;
@@ -311,30 +572,156 @@ footer {
   padding: 20px 0;
   margin-top: 50px;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2;
 }
 
 footer .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
+/* Estilo para a logo no rodapé */
 footer .footer-logo img {
   height: 40px;
+  width: auto;
+  border-radius: 5px;
+  filter: brightness(0) invert(1);
 }
 
+/* Estilo para o texto no rodapé */
 footer .footer-text p {
   margin: 0;
   font-size: 0.7rem;
 }
 
+/* Estilo para o link da Política de Privacidade no rodapé */
 footer .footer-privacy a {
   color: #fff;
   text-decoration: none;
   font-size: 0.7rem;
-  transition: color 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 footer .footer-privacy a:hover {
-  color: #e8ea46;
+  background: linear-gradient(to right, #ff0000, #e8ea46, #8dfffb, #0037c2, #000000);
+  color: #000;
+  transform: scale(1.1);
+}
+
+/* Estilos específicos para a página de Política de Privacidade */
+.politica-privacidade {
+  max-width: 1200px;
+  margin: 80px auto 20px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 2;
+}
+
+.politica-privacidade h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.politica-privacidade h3 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  color: #fff;
+  text-align: center;
+}
+
+.politica-privacidade p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #ddd;
+  text-align: center;
+}
+
+.politica-privacidade ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.politica-privacidade ul li {
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+.politica-privacidade a {
+  color: #25D366;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.politica-privacidade a:hover {
+  color: #128C7E;
+}
+
+/* Estilo para o banner de cookies */
+.cookie-consent-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  z-index: 1000;
+  display: none;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cookie-consent-banner p {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.cookie-consent-banner a {
+  color: #25D366;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.cookie-consent-banner .cookie-buttons {
+  margin-top: 10px;
+}
+
+.cookie-consent-banner .cookie-buttons button {
+  background-color: #25D366;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cookie-consent-banner .cookie-buttons button:hover {
+  background-color: #128C7E;
+}
+
+.cookie-consent-banner .cookie-buttons button.cookie-decline {
+  background-color: #ff0000;
+}
+
+.cookie-consent-banner .cookie-buttons button.cookie-decline:hover {
+  background-color: #cc0000;
 }
