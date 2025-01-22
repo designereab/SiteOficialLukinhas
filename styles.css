@@ -6,6 +6,7 @@
 }
 
 body {
+  padding-top: 100px; /* Ajuste o valor conforme necessário */
   font-family: 'Poppins', sans-serif;
   line-height: 1.5;
   color: #fff;
@@ -507,6 +508,19 @@ html {
 
 #contato .container p {
   margin-top: 20px;
+}
+
+/* Seção de Feedback */
+#feedbacks {
+  margin-top: 100px; /* Ajuste conforme necessário */
+}
+
+.google-reviews {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Seção de Presskit */
