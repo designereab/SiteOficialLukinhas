@@ -264,16 +264,13 @@ html {
 
 .welcome-header h1 {
   font-size: 4rem;
-  animation: fadeIn 2s ease-in-out, gradientAnimation 5s linear infinite; /* Adiciona a animação do gradiente */
+  animation: fadeIn 2s ease-in-out;
   margin-bottom: 30px;
-  background-color: rgba(0, 0, 0, 0.7); /* Fundo preto com 70% de opacidade */
-  color: linear-gradient(to right, #ffffff, #eeeeee) /* Gradiente no texto */
-  background-size: 200% auto; /* Permite o movimento do gradiente */
-  -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto */
-  color: transparent; /* Torna o texto transparente para mostrar o gradiente */
+  color: #fff; /* Texto branco */
   padding: 10px 20px;
   border-radius: 10px;
   display: inline-block;
+  background: none; /* Remove o fundo */
 }
 
 @media (max-width: 768px) {
