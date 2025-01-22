@@ -263,7 +263,7 @@ html {
 }
 
 .welcome-header h1 {
-   font-size: 4rem;
+  font-size: 4rem;
   animation: fadeIn 2s ease-in-out, gradientAnimation 5s linear infinite;
   margin-bottom: 30px;
   background: linear-gradient(to right, #ff0000, #e8ea46, #8dfffb, #0037c2);
@@ -275,7 +275,7 @@ html {
 }
 
 .welcome-header p {
-  font-size: 2.5rem;
+  font-size: 3rem;
   animation: fadeIn 2s ease-in-out;
   margin-bottom: 30px;
   background: none;
@@ -287,6 +287,7 @@ html {
     font-size: 2.5rem;
   }
 }
+
 @media (max-width: 768px) {
   .welcome-header p {
     font-size: 0.8rem;
@@ -295,7 +296,7 @@ html {
 
 .welcome-header .listen-button {
   display: inline-block;
-  padding: 30px 30px;
+  padding: 15px 30px;
   background: linear-gradient(90deg, rgba(255, 0, 0, 0.8), rgba(232, 234, 70, 0.8), rgba(141, 255, 251, 0.8), rgba(0, 55, 194, 0.8), rgba(0, 0, 0, 0.8));
   background-size: 200% auto;
   animation: gradientAnimation 5s linear infinite;
