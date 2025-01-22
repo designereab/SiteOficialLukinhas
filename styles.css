@@ -284,6 +284,8 @@ html {
   font-weight: bold;
   transition: transform 0.3s ease;
   margin-top: 20px; /* Distância entre o botão e o texto acima */
+  margin-left: auto; /* Centraliza horizontalmente */
+  margin-right: auto; /* Centraliza horizontalmente */
 }
 
 .welcome-header .listen-button:hover {
