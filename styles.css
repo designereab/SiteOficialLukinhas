@@ -252,46 +252,23 @@ html {
 }
 
 /* Cabeçalho de Boas-Vindas */
-.welcome-header {
-  position: relative;
-  text-align: center;
-  padding: 40vh 10px;
-  background: rgba(0, 0, 0, 0.3);
-  color: #fff;
-  z-index: 2;
-  margin-top: 10px;
-}
-
 .welcome-header h1 {
   font-size: 4rem;
   animation: fadeIn 2s ease-in-out, gradientAnimation 5s linear infinite;
-  margin-bottom: 30px;
+  margin-bottom: 30px; /* Distância entre o título e o texto abaixo */
   background: linear-gradient(to right, #ff0000, #e8ea46, #8dfffb, #0037c2);
-  background-size: 200% auto; /* Aumenta o tamanho do gradiente para permitir o movimento */
-  -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto */
-  color: transparent; /* Torna o texto transparente para mostrar o gradiente */
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  color: transparent;
   padding: 0;
 }
-}
 
-.welcome-header p {
-  font-size: 3rem;
+.welcome-header .welcome-subtext {
+  font-size: 1.5rem; /* Tamanho do texto */
+  margin-bottom: 20px; /* Distância entre o texto e o botão */
   animation: fadeIn 2s ease-in-out;
-  margin-bottom: 30px;
-  background: none;
-  padding: 0;
-}
-
-@media (max-width: 768px) {
-  .welcome-header h1 {
-    font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .welcome-header p {
-    font-size: 0.8rem;
-  }
+  color: #fff; /* Cor do texto */
+  text-align: center; /* Centraliza o texto */
 }
 
 .welcome-header .listen-button {
@@ -306,10 +283,29 @@ html {
   font-size: 1.5rem;
   font-weight: bold;
   transition: transform 0.3s ease;
+  margin-top: 20px; /* Distância entre o botão e o texto acima */
 }
 
 .welcome-header .listen-button:hover {
   transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .welcome-header h1 {
+    font-size: 2.5rem; /* Tamanho menor para o título em mobile */
+    margin-bottom: 20px; /* Reduz a margem inferior */
+  }
+
+  .welcome-header .welcome-subtext {
+    font-size: 1rem; /* Tamanho menor para o texto em mobile */
+    margin-bottom: 15px; /* Reduz a margem inferior */
+  }
+
+  .welcome-header .listen-button {
+    font-size: 1.2rem; /* Tamanho menor para o botão em mobile */
+    padding: 10px 20px; /* Reduz o padding do botão */
+    margin-top: 15px; /* Reduz a margem superior */
+  }
 }
 
 /* Animação do gradiente */
