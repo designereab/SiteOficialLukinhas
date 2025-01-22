@@ -2,14 +2,12 @@
 /* Reset e Estilos Globais */
 /* ================================================== */
 
-/* Reset básico para remover margens e paddings padrão */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilos globais do body */
 body {
   padding-top: 60px; /* Espaço para o cabeçalho fixo */
   font-family: 'Poppins', sans-serif;
@@ -17,33 +15,42 @@ body {
   color: #fff;
   position: relative;
   overflow-x: hidden;
-  min-height: 100vh; /* Garante que o body ocupe pelo menos a altura da viewport */
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.7); /* Fundo escuro para contraste */
+}
+
+/* ================================================== */
+/* Container Centralizado */
+/* ================================================== */
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* ================================================== */
 /* Estilos de Títulos */
 /* ================================================== */
 
-/* Estilos para todos os títulos (h1 a h6) */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   color: #fff;
-  margin-bottom: 60px; /* Espaçamento abaixo dos títulos */
+  margin: 0 auto 60px;
   text-align: center;
   font-size: 1.7rem;
   padding: 10px 20px;
-  display: block;
-  background: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
-  border-radius: 100px; /* Bordas arredondadas */
-  margin: 0 auto; /* Centraliza os títulos */
-  width: fit-content; /* Ajusta a largura ao conteúdo */
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 100px;
+  width: fit-content;
 }
 
-/* Responsividade para títulos em dispositivos móveis */
 @media (max-width: 768px) {
   h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 40px; /* Espaçamento menor em dispositivos móveis */
+    margin-bottom: 40px;
+    font-size: 1.5rem;
   }
 }
 
@@ -51,39 +58,36 @@ h1, h2, h3, h4, h5, h6 {
 /* Vídeo de Fundo e Overlay */
 /* ================================================== */
 
-/* Vídeo de fundo fixo */
 .video-background {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Coloca o vídeo atrás de todo o conteúdo */
+  z-index: -1;
   overflow: hidden;
 }
 
 .video-background iframe {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Garante que o vídeo cubra toda a área */
+  object-fit: cover;
 }
 
-/* Camada de sombreamento sobre o vídeo */
 .video-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Sombra escura sobre o vídeo */
-  z-index: 1; /* Coloca a camada acima do vídeo */
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
 }
 
 /* ================================================== */
 /* Cabeçalho e Navegação */
 /* ================================================== */
 
-/* Cabeçalho fixo no topo */
 header {
   position: fixed;
   top: 0;
@@ -94,30 +98,19 @@ header {
   transition: background-color 0.3s ease;
   padding: 15px 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  align-items: center; /* Centraliza o conteúdo verticalmente */
 }
 
-/* Container do cabeçalho */
 header .container {
   display: flex;
-  justify-content: space-between; /* Distribui os elementos */
+  justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-  position: relative;
 }
 
-/* Menu Hambúrguer */
 .menu-toggle {
-  display: flex;
+  display: none;
   flex-direction: column;
   cursor: pointer;
   z-index: 1000;
-  margin-right: auto; /* Empurra o ícone de menu para a esquerda */
 }
 
 .menu-toggle .bar {
@@ -128,92 +121,59 @@ header .container {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Logotipo centralizado */
 header .logo {
   text-align: center;
-  margin: 0 auto; /* Centraliza a logo */
 }
 
 header .logo img {
   height: 20px;
 }
 
-/* Navegação (menu lateral) */
 nav {
-  position: absolute;
-  top: 60px; /* Ajuste conforme necessário */
-  left: 20px; /* Ajuste conforme necessário */
-  background-color: rgba(17, 17, 17, 0.9);
-  border-radius: 5px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  display: none;
-  z-index: 1001;
-  padding: 10px;
-  width: 200px;
-}
-
-nav.active {
-  display: block;
+  display: flex;
+  align-items: center;
 }
 
 nav ul.nav-list {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-nav ul.nav-list li {
-  margin: 8px 0;
+  display: flex;
+  gap: 20px;
 }
 
 nav ul.nav-list li a {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  transition: background 0.3s ease, color 0.3s ease;
-  padding: 5px 10px;
-  border-radius: 5px;
+  transition: color 0.3s ease;
 }
 
 nav ul.nav-list li a:hover {
-  background: linear-gradient(to right, #ff0000, #e8ea46, #8dfffb, #0037c2, #000000);
-  color: #000;
+  color: #e8ea46;
 }
 
-/* Ícones de Redes Sociais */
 .social-icons {
   display: flex;
   gap: 12px;
   align-items: center;
-  margin-left: auto; /* Empurra os ícones para a direita */
 }
 
 .social-icons a {
   color: #fff;
   font-size: 1.5rem;
   text-decoration: none;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
-  padding: 5px;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.7);
+  transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-  background: linear-gradient(to right, #ff0000, #e8ea46, #8dfffb, #0037c2, #000000);
-  color: #000;
-  transform: scale(1.1);
+  color: #e8ea46;
 }
 
 /* ================================================== */
 /* Botões e Interações */
 /* ================================================== */
 
-/* Botão de retornar ao topo */
 #back-to-top {
   display: none;
   position: fixed;
@@ -228,44 +188,29 @@ nav ul.nav-list li a:hover {
   height: 40px;
   font-size: 1.2rem;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 #back-to-top:hover {
-  background: linear-gradient(to right, #ff0000, #e8ea46, #8dfffb, #0037c2, #000000);
+  background-color: rgba(255, 255, 255, 0.9);
   color: #000;
   transform: scale(1.1);
-  opacity: 0.9;
 }
 
-/* Botão do WhatsApp */
 .whatsapp-button {
   display: inline-block;
   padding: 15px 30px;
   background: linear-gradient(90deg, #25D366, #128C7E, #075E54);
-  background-size: 200% auto;
-  animation: gradientAnimation 5s linear infinite;
   color: #fff;
   text-decoration: none;
   border-radius: 50px;
   font-size: 1.2rem;
   font-weight: bold;
   transition: transform 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
 }
 
 .whatsapp-button:hover {
   transform: scale(1.1);
-}
-
-.whatsapp-button i {
-  margin-right: 10px;
 }
 
 /* ================================================== */
@@ -275,77 +220,56 @@ nav ul.nav-list li a:hover {
 .welcome-header {
   position: relative;
   text-align: center;
-  padding: 40vh 10px; /* Espaçamento vertical grande para centralizar o conteúdo */
-  background: rgba(0, 0, 0, 0.3); /* Fundo semi-transparente */
+  padding: 40vh 10px;
+  background: rgba(0, 0, 0, 0.3);
   color: #fff;
   z-index: 2;
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centraliza horizontalmente */
-  justify-content: center; /* Centraliza verticalmente */
 }
 
-/* Título principal */
 .welcome-header h1 {
   font-size: 4rem;
-  animation: fadeIn 2s ease-in-out; /* Animação de entrada */
-  margin-bottom: 20px; /* Espaçamento abaixo do título */
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 10px;
-  display: inline-block;
-  background: none;
+  animation: fadeIn 2s ease-in-out;
+  margin-bottom: 20px;
 }
 
-/* Texto "Confira as novidades..." */
 .welcome-header .welcome-subtext {
   font-size: 1.2rem;
-  margin-bottom: 30px; /* Espaçamento abaixo do texto */
-  color: #fff;
-  max-width: 600px; /* Limita a largura do texto */
-  line-height: 1.6; /* Melhora a legibilidade */
+  margin-bottom: 30px;
+  max-width: 600px;
+  line-height: 1.6;
 }
 
-/* Botão "Ouça agora" */
 .welcome-header .listen-button {
   display: inline-block;
   padding: 10px 20px;
   background: linear-gradient(90deg, rgba(255, 0, 0, 0.8), rgba(232, 234, 70, 0.8), rgba(141, 255, 251, 0.8), rgba(0, 55, 194, 0.8), rgba(0, 0, 0, 0.8));
-  background-size: 200% auto;
-  animation: gradientAnimation 5s linear infinite;
   color: #000;
   text-decoration: none;
   border-radius: 50px;
   font-size: 1.5rem;
   font-weight: bold;
   transition: transform 0.3s ease;
-  margin-top: 20px; /* Espaçamento acima do botão */
 }
 
 .welcome-header .listen-button:hover {
-  transform: scale(1.1); /* Efeito de escala ao passar o mouse */
+  transform: scale(1.1);
 }
 
-/* Responsividade para o cabeçalho de boas-vindas */
 @media (max-width: 768px) {
   .welcome-header {
-    padding: 20vh 10px; /* Reduz o espaçamento vertical */
+    padding: 20vh 10px;
   }
 
   .welcome-header h1 {
-    font-size: 2.5rem; /* Tamanho menor para dispositivos móveis */
-    margin-bottom: 15px;
+    font-size: 2.5rem;
   }
 
   .welcome-header .welcome-subtext {
-    font-size: 1rem; /* Tamanho menor para dispositivos móveis */
-    margin-bottom: 20px;
+    font-size: 1rem;
   }
 
   .welcome-header .listen-button {
-    font-size: 1.2rem; /* Tamanho menor para dispositivos móveis */
-    margin-top: 15px;
+    font-size: 1.2rem;
   }
 }
 
@@ -353,7 +277,6 @@ nav ul.nav-list li a:hover {
 /* Animações */
 /* ================================================== */
 
-/* Animação do gradiente */
 @keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
@@ -366,7 +289,6 @@ nav ul.nav-list li a:hover {
   }
 }
 
-/* Animação de entrada do título */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -389,24 +311,16 @@ footer {
   padding: 20px 0;
   margin-top: 50px;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
-  position: relative;
-  z-index: 2;
 }
 
 footer .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 footer .footer-logo img {
   height: 40px;
-  width: auto;
-  border-radius: 5px;
-  filter: brightness(0) invert(1);
 }
 
 footer .footer-text p {
@@ -418,13 +332,9 @@ footer .footer-privacy a {
   color: #fff;
   text-decoration: none;
   font-size: 0.7rem;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
-  padding: 5px 10px;
-  border-radius: 5px;
+  transition: color 0.3s ease;
 }
 
 footer .footer-privacy a:hover {
-  background: linear-gradient(to right, #ff0000, #e8ea46, #8dfffb, #0037c2, #000000);
-  color: #000;
-  transform: scale(1.1);
+  color: #e8ea46;
 }
