@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+.logo a {
+  text-decoration: none; /* Remove o sublinhado */
+  border: none; /* Remove bordas */
+}
+.logo a:hover {
+  opacity: 0.8; /* Efeito de hover suave */
+}
+
 body {
   padding-top: 60px; /* Ajuste o valor conforme necessário */
   font-family: 'Poppins', sans-serif;
