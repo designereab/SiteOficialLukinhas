@@ -15,7 +15,7 @@
 
 @font-face {
   font-family: 'Ethnocentric'; /* Nome que você dará à fonte */
-  src: url('./main/Ethnocentric) format('opentype');  /* Formato moderno */
+  src: url('./main/Ethnocentric') format('opentype');  /* Formato moderno */
   font-weight: normal; /* Peso da fonte (normal, bold, etc.) */
   font-style: normal;  /* Estilo da fonte (normal, italic, etc.) */
 }
@@ -59,7 +59,6 @@ h1, h6 {
   display: block;
   background: none; /* Remove o fundo */
   border-radius: 100px;
-  margin: 0 auto;
   width: fit-content;
   animation: none;
 }
@@ -233,7 +232,6 @@ html {
 
 /* Botão de retornar ao topo */
 #back-to-top {
-  display: none;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -480,7 +478,8 @@ html {
   background: rgba(0, 0, 0, 0.0); /* Fundo escuro semi-transparente */
   padding: 20px 10px; /* Padding reduzido */
   margin-top: 50px; /* Margem superior reduzida */
-  display: flex; /* Ativa Flexbox */
+  display: flex;
+  flex-direction: column; /* Adicione isso */
   justify-content: center; /* Centraliza horizontalmente */
   align-items: center; /* Centraliza verticalmente */
   min-height: 300px; /* Altura mínima para a seção */
@@ -502,7 +501,8 @@ html {
   background: rgba(0, 0, 0, 0.0); /* Fundo escuro semi-transparente */
   padding: 20px 10px; /* Padding reduzido */
   margin-top: 50px; /* Margem superior reduzida */
-  display: flex; /* Ativa Flexbox */
+  display: flex;
+  flex-direction: column; /* Adicione isso */
   justify-content: center; /* Centraliza horizontalmente */
   align-items: center; /* Centraliza verticalmente */
   min-height: 300px; /* Altura mínima para a seção */
