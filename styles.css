@@ -15,7 +15,7 @@
 
 @font-face {
   font-family: 'EthnocentricIt'; /* Nome que você dará à fonte */
-  src: url('/main/fonts/EthnocentricIt.otf') format('opentype');  /* Formato moderno */
+  src: url('fonts/EthnocentricIt.otf') format('opentype');  /* Formato moderno */
   font-weight: normal; /* Peso da fonte (normal, bold, etc.) */
   font-style: normal;  /* Estilo da fonte (normal, italic, etc.) */
 }
