@@ -14,8 +14,8 @@
 }
 
 @font-face {
-  font-family: 'Ethnocentric'; /* Nome que você dará à fonte */
-  src: url('/main/Ethnocentric.otf') format('opentype');  /* Formato moderno */
+  font-family: 'EthnocentricIt'; /* Nome que você dará à fonte */
+  src: url('/main/fonts/EthnocentricIt.otf') format('opentype');  /* Formato moderno */
   font-weight: normal; /* Peso da fonte (normal, bold, etc.) */
   font-style: normal;  /* Estilo da fonte (normal, italic, etc.) */
 }
@@ -32,7 +32,7 @@ body {
 
 /* Títulos principais sem fundo e letras brancas */
 h2, h3, h4, h5 {
-  font-family: 'Ethnocentric', sans-serif;
+  font-family: 'EthnocentricIt', sans-serif;
   font-weight: 700;
   color: #fff; /* Texto branco */
   margin-bottom: 60px;
