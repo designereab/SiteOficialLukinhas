@@ -15,7 +15,7 @@
 
 @font-face {
   font-family: 'Ethnocentric Rg It'; /* Nome que você dará à fonte */
-  src: url('./main/fonts/Ethnocentric Rg It) format('opentype');  /* Formato moderno */
+  src: url('/main/Ethnocentric Rg It) format('opentype');  /* Formato moderno */
   font-weight: normal; /* Peso da fonte (normal, bold, etc.) */
   font-style: normal;  /* Estilo da fonte (normal, italic, etc.) */
 }
