@@ -70,6 +70,30 @@ if (backToTopButton) {
 }
 
 // ==================================================
+// Animação de Aparição das Seções
+// ==================================================
+
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('.section');
+
+  const checkVisibility = () => {
+    sections.forEach(section => {
+      const sectionTop = section.getBoundingClientRect().top;
+      const sectionBottom = section.getBoundingClientRect().bottom;
+
+      // Verifica se a seção está visível na tela
+      if (sectionTop < window.innerHeight && sectionBottom > 0) {
+        section.classList.add('visible');
+      }
+    });
+  };
+
+  // Verifica a visibilidade das seções ao carregar a página e ao rolar
+  checkVisibility();
+  window.addEventListener('scroll', checkVisibility);
+});
+
+// ==================================================
 // Controle da Galeria de Vídeos
 // ==================================================
 
