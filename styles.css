@@ -187,7 +187,7 @@ nav ul.nav-list li a {
   transition: background 0.3s ease, color 0.3s ease;
   padding: 5px 10px;
   border-radius: 5px;
-  font-size: 0.8rem; /* Tamanho da fonte ajustado */
+  font-size: 0.9rem; /* Tamanho da fonte ajustado */
   text-align: center; /* Centraliza o texto horizontalmente */
   display: block; /* Faz o link ocupar toda a largura do li */
 }
