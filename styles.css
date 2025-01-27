@@ -156,7 +156,7 @@ nav {
   position: absolute;
   top: 60px; /* Ajuste conforme necessário */
   left: 20px; /* Ajuste conforme necessário */
-  background-color: rgba(17, 17, 17, 0.5);
+  background-color: rgba(17, 17, 17, 0.9);
   border-radius: 5px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   display: none;
