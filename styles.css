@@ -71,7 +71,7 @@ h1, h6 {
 
   @media (max-width: 768px) {
   header {
-    padding: 10px 0; /* Ajuste este valor conforme necessário */
+    padding: 40px 0; /* Ajuste este valor conforme necessário */
   }
 }
 
