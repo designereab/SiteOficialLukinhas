@@ -69,11 +69,10 @@ h1, h6 {
   }
 }
 
-  @media (max-width: 768px) {
-  header {
-    padding: 40px 0; /* Ajuste este valor conforme necessário */
+@media (max-width: 768px) {
+  body {
+    padding-top: 50px; /* Ajuste este valor conforme necessário */
   }
-}
 
 /* Vídeo de fundo */
 .video-background {
