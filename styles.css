@@ -227,7 +227,7 @@ nav ul.nav-list li a:hover {
 
 /* Ajuste do scroll para compensar o cabeçalho fixo */
 html {
-  scroll-padding-top: 80px;
+  scroll-padding-top: 120px;
 }
 
 /* Botão de retornar ao topo */
