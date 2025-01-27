@@ -50,17 +50,21 @@ h1, h2, h3, h4, h5, h6 {
 
 h2, h3, h4, h5 {
   font-family: 'EthnocentricIt', sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
 }
 
-h1, h6 {
+h1 {
   font-family: 'Poppins', sans-serif;
   font-size: 2rem;
+}
+h6 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
 }
 
 @media (max-width: 768px) {
   h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 40px;
+    margin-bottom: 80px;
   }
 }
 
