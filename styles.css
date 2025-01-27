@@ -5,23 +5,27 @@
   box-sizing: border-box;
 }
 
-.logo a {
-  text-decoration: none; /* Remove o sublinhado */
-  border: none; /* Remove bordas */
-}
-.logo a:hover {
-  opacity: 0.8; /* Efeito de hover suave */
+/* Estilos comuns para links */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
 }
 
+a:hover {
+  opacity: 0.8;
+}
+
+/* Fontes personalizadas */
 @font-face {
-  font-family: 'EthnocentricIt'; /* Nome que você dará à fonte */
-  src: url('fonts/EthnocentricIt.otf') format('opentype');  /* Formato moderno */
-  font-weight: normal; /* Peso da fonte (normal, bold, etc.) */
-  font-style: normal;  /* Estilo da fonte (normal, italic, etc.) */
+  font-family: 'EthnocentricIt';
+  src: url('fonts/EthnocentricIt.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-  padding-top: 60px; /* Ajuste o valor conforme necessário */
+  padding-top: 60px;
   font-family: 'Poppins', sans-serif;
   line-height: 1.5;
   color: #fff;
@@ -30,37 +34,28 @@ body {
   min-height: 100vh;
 }
 
-/* Títulos principais sem fundo e letras brancas */
-h2, h3, h4, h5 {
-  font-family: 'EthnocentricIt', sans-serif;
+/* Estilos comuns para títulos */
+h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  color: #fff; /* Texto branco */
+  color: #fff;
   margin-bottom: 60px;
   text-align: center;
-  font-size: 2.5rem;
   padding: 10px 20px;
   display: block;
-  background: none; /* Remove o fundo */
+  background: none;
   border-radius: 100px;
-  margin: 0 auto;
   width: fit-content;
-  animation: none;
+  margin: 0 auto;
 }
 
-/* Títulos principais sem fundo e letras brancas */
+h2, h3, h4, h5 {
+  font-family: 'EthnocentricIt', sans-serif;
+  font-size: 2.5rem;
+}
+
 h1, h6 {
   font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  color: #fff; /* Texto branco */
-  margin-bottom: 60px;
-  text-align: center;
   font-size: 2rem;
-  padding: 10px 20px;
-  display: block;
-  background: none; /* Remove o fundo */
-  border-radius: 100px;
-  width: fit-content;
-  animation: none;
 }
 
 @media (max-width: 768px) {
@@ -68,11 +63,6 @@ h1, h6 {
     margin-bottom: 40px;
   }
 }
-
-@media (max-width: 768px) {
-  body {
-    padding-top: 50px; /* Ajuste este valor conforme necessário */
-  }
 
 /* Vídeo de fundo */
 .video-background {
@@ -104,7 +94,7 @@ h1, h6 {
 
 /* Cabeçalho */
 header {
- position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -114,14 +104,14 @@ header {
   padding: 15px 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   display: flex;
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  align-items: center; /* Centraliza o conteúdo verticalmente */
+  justify-content: center;
+  align-items: center;
 }
 
 header .container {
-display: flex;
-  justify-content: space-between; /* Distribui os elementos */
-  align-items: center; /* Centraliza verticalmente */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
@@ -129,13 +119,13 @@ display: flex;
   position: relative;
 }
 
-/* Menu Hambúrguer (lado esquerdo) */
+/* Menu Hambúrguer */
 .menu-toggle {
   display: flex;
   flex-direction: column;
   cursor: pointer;
   z-index: 1000;
-  margin-right: auto; /* Empurra o ícone de menu para a esquerda */
+  margin-right: auto;
 }
 
 .menu-toggle .bar {
@@ -146,21 +136,21 @@ display: flex;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Logotipo centralizada */
+/* Logotipo */
 header .logo {
   text-align: center;
-  margin: 0 auto; /* Centraliza a logo */
+  margin: 0 auto;
 }
 
 header .logo img {
   height: 20px;
 }
 
-/* Navegação (alinhada com o ícone do menu) */
+/* Navegação */
 nav {
   position: absolute;
-  top: 60px; /* Ajuste conforme necessário */
-  left: 20px; /* Ajuste conforme necessário */
+  top: 60px;
+  left: 20px;
   background-color: rgba(17, 17, 17, 0.9);
   border-radius: 5px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -191,9 +181,9 @@ nav ul.nav-list li a {
   transition: background 0.3s ease, color 0.3s ease;
   padding: 5px 10px;
   border-radius: 5px;
-  font-size: 1rem; /* Tamanho da fonte da lista de menu ajustado */
-  text-align: center; /* Centraliza o texto horizontalmente */
-  display: block; /* Faz o link ocupar toda a largura do li */
+  font-size: 1rem;
+  text-align: center;
+  display: block;
 }
 
 nav ul.nav-list li a:hover {
@@ -201,12 +191,12 @@ nav ul.nav-list li a:hover {
   color: #000;
 }
 
-/* Ícones de Redes Sociais (lado direito) */
+/* Ícones de Redes Sociais */
 .social-icons {
   display: flex;
   gap: 8px;
   align-items: center;
-  margin-left: auto; /* Empurra os ícones de redes sociais para a direita */
+  margin-left: auto;
 }
 
 .social-icons a {
@@ -304,11 +294,11 @@ html {
   font-size: 4rem;
   animation: fadeIn 2s ease-in-out;
   margin-bottom: 30px;
-  color: #fff; /* Texto branco */
+  color: #fff;
   padding: 10px 20px;
   border-radius: 10px;
   display: inline-block;
-  background: none; /* Remove o fundo */
+  background: none;
 }
 
 .welcome-header .listen-button {
@@ -323,7 +313,7 @@ html {
   font-size: 1.5rem;
   font-weight: bold;
   transition: transform 0.3s ease;
-  margin-top: 20px; /* Distância entre o botão e o texto acima */
+  margin-top: 20px;
 }
 
 .welcome-header .listen-button:hover {
@@ -333,17 +323,17 @@ html {
 @media (max-width: 768px) {
   .welcome-header h1 {
     font-size: 2.5rem;
-    margin-bottom: 20px; /* Ajuste para dispositivos móveis */
+    margin-bottom: 20px;
   }
 
   .welcome-header .welcome-subtext {
-    font-size: 1rem; /* Tamanho menor para dispositivos móveis */
-    margin-bottom: 15px; /* Ajuste para dispositivos móveis */
+    font-size: 1rem;
+    margin-bottom: 15px;
   }
 
   .welcome-header .listen-button {
-    font-size: 1.2rem; /* Tamanho menor para dispositivos móveis */
-    margin-top: 15px; /* Ajuste para dispositivos móveis */
+    font-size: 1.2rem;
+    margin-top: 15px;
   }
 }
 
@@ -378,14 +368,14 @@ html {
   padding: 10px 10px;
   position: relative;
   z-index: 2;
-  opacity: 0; /* Inicia invisível */
-  transform: translateY(50px); /* Inicia 50px abaixo */
+  opacity: 0;
+  transform: translateY(50px);
   transition: opacity 1s ease, transform 1s ease;
 }
 
 .section.visible {
-  opacity: 1; /* Torna visível */
-  transform: translateY(0); /* Move para a posição original */
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .section p {
@@ -398,21 +388,19 @@ html {
 }
 
 /* Estilo para as miniaturas dos vídeos */
-
-/* Estilo para o container das miniaturas */
 .thumbnail-container {
-  position: relative; /* Permite posicionar o botão de play sobre a imagem */
-  width: 150px; /* Largura das miniaturas */
+  position: relative;
+  width: 150px;
   height: auto;
-  border-radius: 10px; /* Bordas arredondadas */
-  overflow: hidden; /* Garante que a imagem não ultrapasse o container */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .thumbnail-container:hover {
-  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Sombra mais intensa */
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 .thumbnail-container img {
@@ -423,47 +411,48 @@ html {
 
 /* Estilo para o botão de play */
 .play-button {
-  position: absolute; /* Posiciona o botão sobre a imagem */
-  top: 50%; /* Centraliza verticalmente */
-  left: 50%; /* Centraliza horizontalmente */
-  transform: translate(-50%, -50%); /* Ajusta o posicionamento */
-  background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semi-transparente */
-  width: 40px; /* Tamanho do botão */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 40px;
   height: 40px;
-  border-radius: 50%; /* Formato circular */
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff; /* Cor do ícone */
-  font-size: 20px; /* Tamanho do ícone */
-  opacity: 0.9; /* Opacidade do botão */
+  color: #fff;
+  font-size: 20px;
+  opacity: 0.9;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .play-button:hover {
-  opacity: 1; /* Aumenta a opacidade ao passar o mouse */
-  transform: translate(-50%, -50%) scale(1.1); /* Efeito de zoom */
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
 }
+
 .video-thumbnails {
   display: flex;
   justify-content: center;
-  gap: 10px; /* Espaço entre as miniaturas */
-  margin-top: 20px; /* Espaço acima das miniaturas */
+  gap: 10px;
+  margin-top: 20px;
 }
 
 .video-thumbnails a {
   display: block;
-  width: 150px; /* Largura das miniaturas */
+  width: 150px;
   height: auto;
-  border-radius: 10px; /* Bordas arredondadas */
-  overflow: hidden; /* Garante que a imagem não ultrapasse o container */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .video-thumbnails a:hover {
-  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Sombra mais intensa */
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 .video-thumbnails img {
@@ -474,37 +463,36 @@ html {
 
 /* Seção de Músicas */
 #musicas {
-  background: rgba(0, 0, 0, 0.0); /* Fundo escuro semi-transparente */
-  padding: 20px 10px; /* Padding reduzido */
-  margin-top: 50px; /* Margem superior reduzida */
+  background: rgba(0, 0, 0, 0.0);
+  padding: 20px 10px;
+  margin-top: 50px;
   display: flex;
-  flex-direction: column; /* Adicione isso */
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  min-height: 300px; /* Altura mínima para a seção */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
 }
 
-/* Estilo para o embed do Spotify compacto */
 #musicas iframe {
   border-radius: 0px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  background-color: #000; /* Fundo escuro */
-  border: 0px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+  background-color: #000;
+  border: 0px solid rgba(255, 255, 255, 0.1);
   width: 100%;
   max-width: 800px;
-  height: 250px; /* Altura reduzida */
+  height: 250px;
 }
 
 /* Seção de Vídeos */
 #videos {
-  background: rgba(0, 0, 0, 0.0); /* Fundo escuro semi-transparente */
-  padding: 20px 10px; /* Padding reduzido */
-  margin-top: 50px; /* Margem superior reduzida */
+  background: rgba(0, 0, 0, 0.0);
+  padding: 20px 10px;
+  margin-top: 50px;
   display: flex;
-  flex-direction: column; /* Adicione isso */
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  min-height: 300px; /* Altura mínima para a seção */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
 }
 
 /* Galeria de Vídeos */
